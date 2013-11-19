@@ -24,7 +24,10 @@
 		6E5A36651839B236009B7ED5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A36631839B236009B7ED5 /* InfoPlist.strings */; };
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
-		6E964CB01839B70300515563 /* Msg.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* Msg.m */; };
+		6E964CB01839B70300515563 /* MsgPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* MsgPost.m */; };
+		6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363D7183AB02100610ECE /* MappingProvider.m */; };
+		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
+		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,14 @@
 		6E5A36661839B236009B7ED5 /* SinaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaiTests.m; sourceTree = "<group>"; };
 		6E964CAB1839B6D300515563 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		6E964CAC1839B6D300515563 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
-		6E964CAE1839B70300515563 /* Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Msg.h; sourceTree = "<group>"; };
-		6E964CAF1839B70300515563 /* Msg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Msg.m; sourceTree = "<group>"; };
+		6E964CAE1839B70300515563 /* MsgPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPost.h; sourceTree = "<group>"; };
+		6E964CAF1839B70300515563 /* MsgPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPost.m; sourceTree = "<group>"; };
+		6EC363D6183AB02100610ECE /* MappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingProvider.h; sourceTree = "<group>"; };
+		6EC363D7183AB02100610ECE /* MappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingProvider.m; sourceTree = "<group>"; };
+		6EC363D9183AB2A500610ECE /* MsgGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGet.h; sourceTree = "<group>"; };
+		6EC363DA183AB2A500610ECE /* MsgGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgGet.m; sourceTree = "<group>"; };
+		6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGetViewController.h; sourceTree = "<group>"; };
+		6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgGetViewController.m; sourceTree = "<group>"; };
 		9105C1F8614E42DDBC5028F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,8 +108,10 @@
 				6E0361701839B5A600748088 /* User.m */,
 				6E964CAB1839B6D300515563 /* Login.h */,
 				6E964CAC1839B6D300515563 /* Login.m */,
-				6E964CAE1839B70300515563 /* Msg.h */,
-				6E964CAF1839B70300515563 /* Msg.m */,
+				6E964CAE1839B70300515563 /* MsgPost.h */,
+				6E964CAF1839B70300515563 /* MsgPost.m */,
+				6EC363D9183AB2A500610ECE /* MsgGet.h */,
+				6EC363DA183AB2A500610ECE /* MsgGet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,6 +126,8 @@
 		6E03616D1839B54A00748088 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */,
+				6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -154,9 +167,10 @@
 		6E5A36411839B236009B7ED5 /* Sinai */ = {
 			isa = PBXGroup;
 			children = (
+				6EC363D5183AAFD100610ECE /* MappingProvider */,
 				6E03616B1839B53A00748088 /* Model */,
-				6E03616C1839B54400748088 /* View */,
 				6E03616D1839B54A00748088 /* Controller */,
+				6E03616C1839B54400748088 /* View */,
 				6E5A364A1839B236009B7ED5 /* AppDelegate.h */,
 				6E5A364B1839B236009B7ED5 /* AppDelegate.m */,
 				6E5A364D1839B236009B7ED5 /* Main.storyboard */,
@@ -195,6 +209,15 @@
 				6E5A36631839B236009B7ED5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EC363D5183AAFD100610ECE /* MappingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				6EC363D6183AB02100610ECE /* MappingProvider.h */,
+				6EC363D7183AB02100610ECE /* MappingProvider.m */,
+			);
+			name = MappingProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,8 +354,11 @@
 			files = (
 				6E964CAD1839B6D300515563 /* Login.m in Sources */,
 				6E0361711839B5A600748088 /* User.m in Sources */,
+				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
 				6E5A36521839B236009B7ED5 /* ViewController.m in Sources */,
-				6E964CB01839B70300515563 /* Msg.m in Sources */,
+				6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */,
+				6E964CB01839B70300515563 /* MsgPost.m in Sources */,
+				6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */,
 				6E5A364C1839B236009B7ED5 /* AppDelegate.m in Sources */,
 				6E5A36481839B236009B7ED5 /* main.m in Sources */,
 			);

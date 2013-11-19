@@ -12,6 +12,5 @@
 
 @property (assign, nonatomic) NSInteger iduser;
 @property (strong, nonatomic) NSString *email;
-@property (strong, nonatomic) NSString *password;
 
 @end
