@@ -11,6 +11,7 @@
 #import "Login.h"
 #import "MsgPost.h"
 #import "MsgGet.h"
+#import "Output.h"
 
 
 @implementation MappingProvider
@@ -38,6 +39,13 @@
 + (RKMapping *)msgGetMapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[MsgGet class]];
     [mapping addAttributeMappingsFromArray:@[@"idmsg", @"descricao", @"oracoes"]];
+    
+    return mapping;
+}
+
++ (RKMapping *)outputMapping {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Output class]];
+    [mapping addAttributeMappingsFromArray:@[@"output"]];
     
     return mapping;
 }

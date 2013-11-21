@@ -11,5 +11,6 @@
 @interface MsgGetViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgGet;
 - (IBAction)btnAtualizar:(UIButton *)sender;
+- (IBAction)btnOrei:(UIButton *)sender;
 
 @end

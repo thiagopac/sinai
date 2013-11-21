@@ -15,5 +15,6 @@
 + (RKMapping *)loginMapping;
 + (RKMapping *)msgPostMapping;
 + (RKMapping *)msgGetMapping;
++ (RKMapping *)outputMapping;
 
 @end

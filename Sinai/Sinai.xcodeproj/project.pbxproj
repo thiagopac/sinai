@@ -23,11 +23,14 @@
 		6E5A365D1839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
 		6E5A36651839B236009B7ED5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A36631839B236009B7ED5 /* InfoPlist.strings */; };
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
+		6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */; };
+		6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9139BE183C2B400090FEE3 /* OracaoFeita.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
 		6E964CB01839B70300515563 /* MsgPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* MsgPost.m */; };
 		6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363D7183AB02100610ECE /* MappingProvider.m */; };
 		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
 		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
+		6EC363E1183B002000610ECE /* Output.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363E0183B002000610ECE /* Output.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,10 @@
 		6E5A36621839B236009B7ED5 /* SinaiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SinaiTests-Info.plist"; sourceTree = "<group>"; };
 		6E5A36641839B236009B7ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E5A36661839B236009B7ED5 /* SinaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaiTests.m; sourceTree = "<group>"; };
+		6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPostViewController.h; sourceTree = "<group>"; };
+		6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPostViewController.m; sourceTree = "<group>"; };
+		6E9139BD183C2B400090FEE3 /* OracaoFeita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OracaoFeita.h; sourceTree = "<group>"; };
+		6E9139BE183C2B400090FEE3 /* OracaoFeita.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OracaoFeita.m; sourceTree = "<group>"; };
 		6E964CAB1839B6D300515563 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		6E964CAC1839B6D300515563 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		6E964CAE1839B70300515563 /* MsgPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPost.h; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 		6EC363DA183AB2A500610ECE /* MsgGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgGet.m; sourceTree = "<group>"; };
 		6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGetViewController.h; sourceTree = "<group>"; };
 		6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgGetViewController.m; sourceTree = "<group>"; };
+		6EC363DF183B002000610ECE /* Output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Output.h; sourceTree = "<group>"; };
+		6EC363E0183B002000610ECE /* Output.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Output.m; sourceTree = "<group>"; };
 		9105C1F8614E42DDBC5028F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +121,10 @@
 				6E964CAF1839B70300515563 /* MsgPost.m */,
 				6EC363D9183AB2A500610ECE /* MsgGet.h */,
 				6EC363DA183AB2A500610ECE /* MsgGet.m */,
+				6EC363DF183B002000610ECE /* Output.h */,
+				6EC363E0183B002000610ECE /* Output.m */,
+				6E9139BD183C2B400090FEE3 /* OracaoFeita.h */,
+				6E9139BE183C2B400090FEE3 /* OracaoFeita.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -128,6 +141,8 @@
 			children = (
 				6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */,
 				6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */,
+				6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */,
+				6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -352,14 +367,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC363E1183B002000610ECE /* Output.m in Sources */,
 				6E964CAD1839B6D300515563 /* Login.m in Sources */,
 				6E0361711839B5A600748088 /* User.m in Sources */,
+				6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */,
 				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
 				6E5A36521839B236009B7ED5 /* ViewController.m in Sources */,
 				6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */,
 				6E964CB01839B70300515563 /* MsgPost.m in Sources */,
 				6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */,
 				6E5A364C1839B236009B7ED5 /* AppDelegate.m in Sources */,
+				6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */,
 				6E5A36481839B236009B7ED5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

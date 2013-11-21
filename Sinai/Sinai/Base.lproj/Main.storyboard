@@ -7,7 +7,6 @@
         <!--View Controller - Administrar-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1X4-0y-gIZ"/>
@@ -20,8 +19,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Administrar" id="hLg-g4-3QI"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="1071"/>
+            <point key="canvasLocation" x="445" y="1071"/>
         </scene>
         <!--Msg Get View Controller - Orar-->
         <scene sceneID="7af-wS-vS9">
@@ -52,6 +52,16 @@
                                     <action selector="btnAtualizar:" destination="Tei-Ka-Zd3" eventType="touchUpInside" id="aQD-Zf-MsL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-1Z-B1V">
+                                <rect key="frame" x="144" y="343" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Orei">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOrei:" destination="Tei-Ka-Zd3" eventType="touchUpInside" id="hEc-Wq-fDm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -68,7 +78,7 @@
         <scene sceneID="MAA-dJ-ofQ">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="WjV-Cl-X93" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="amC-3p-U79">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -84,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="-97" y="490"/>
         </scene>
-        <!--View Controller - Escrever-->
+        <!--Msg Post View Controller - Escrever-->
         <scene sceneID="ZhZ-ay-3eR">
             <objects>
-                <viewController id="w3n-yD-QOg" sceneMemberID="viewController">
+                <viewController id="w3n-yD-QOg" customClass="MsgPostViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TCZ-yi-Vjm"/>
                         <viewControllerLayoutGuide type="bottom" id="lPM-cV-cmC"/>
@@ -95,13 +105,38 @@
                     <view key="view" contentMode="scaleToFill" id="u5F-OO-1fq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uib-jJ-gSy">
+                                <rect key="frame" x="20" y="20" width="280" height="144"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.92549026010000002" green="0.94117653369999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgZ-5g-6a9">
+                                <rect key="frame" x="79" y="172" width="162" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Português"/>
+                                    <segment title="English"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSp-AN-8Aa">
+                                <rect key="frame" x="128" y="208" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Escrever" id="eox-na-GWv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0A-Nx-k7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="482"/>
+            <point key="canvasLocation" x="445" y="481"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

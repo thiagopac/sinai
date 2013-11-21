@@ -9,12 +9,16 @@
 #import "MsgGetViewController.h"
 #import <Restkit/RestKit.h>
 #import "MsgGet.h"
+#import "Output.h"
+#import "OracaoFeita.h"
 #import "MappingProvider.h"
 #import <SVProgressHUD.h>
 
-@interface MsgGetViewController ()
+@interface MsgGetViewController (){
+    MsgGet *msgget;
+}
 
-@property (strong, nonatomic) MsgGet *msgget;
+@property (strong, nonatomic) Output *outputObj;
 
 @end
 
@@ -51,9 +55,9 @@
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
                                                                         responseDescriptors:@[responseDescriptor]];
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        self.msgget = mappingResult.firstObject;
-        NSLog(@"msg = %@",self.msgget.descricao);
-        self.lblMsgGet.text = self.msgget.descricao;
+        msgget = mappingResult.firstObject;
+        NSLog(@"msg = %@",msgget.descricao);
+        self.lblMsgGet.text = msgget.descricao;
         [[self lblMsgGet] setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
         [[self lblMsgGet]setTextAlignment:NSTextAlignmentCenter];
         [[self lblMsgGet] setTextColor:[UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1]];
@@ -67,6 +71,55 @@
     [operation start];
 }
 
+-(void)orei{
+    
+    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
+    [requestMapping addAttributeMappingsFromArray:@[@"idmsg"]];
+    
+    RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[Output class]];
+    [responseMapping addAttributeMappingsFromArray:@[@"output"]];
+    
+    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[OracaoFeita  class] rootKeyPath:nil method:RKRequestMethodPUT];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping
+                                                                                            method:RKRequestMethodPUT
+                                                                                       pathPattern:nil
+                                                                                           keyPath:nil
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
+    NSString  *path= @"sinai/webservice/updateoracao";
+    
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
+    [objectManager addRequestDescriptor:requestDescriptor];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+    objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+    
+    OracaoFeita *oracao = [OracaoFeita new];
+
+    oracao.idmsg = msgget.idmsg;
+    
+    [objectManager putObject:oracao
+                         path:path
+                   parameters:nil
+                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                          if(mappingResult != nil){
+                              Output *success = [mappingResult firstObject];
+                              NSLog(@"msg : %@",success.output);
+                              [SVProgressHUD dismiss];
+                              [self dismissViewControllerAnimated:YES completion:nil];
+                          }else{
+                              [SVProgressHUD dismiss];
+                              NSLog(@"Erro, nenhuma resposta!");
+                          }
+                          
+                      }
+                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                          NSLog(@"Error: %@", error);
+                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                      }];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -75,6 +128,15 @@
 
 - (IBAction)btnAtualizar:(UIButton *)sender {
     [SVProgressHUD show];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        [self loadMsgGet];
+    });
+}
+
+- (IBAction)btnOrei:(UIButton *)sender {
+    [SVProgressHUD showSuccessWithStatus:@""];
+    [self orei];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [self loadMsgGet];
