@@ -10,9 +10,10 @@
 
 @interface MsgPost : NSObject
 
+@property (assign, nonatomic) NSInteger idmsg;
 @property (strong, nonatomic) NSString *descricao;
-@property (strong, nonatomic) NSNumber *validade;
+@property (assign, nonatomic) float validade;
 @property (strong, nonatomic) NSString *idioma;
-@property (strong, nonatomic) NSNumber *iduser;
+@property (assign, nonatomic) NSInteger iduser;
 
 @end

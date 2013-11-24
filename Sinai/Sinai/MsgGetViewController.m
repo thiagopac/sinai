@@ -79,7 +79,7 @@
     RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[Output class]];
     [responseMapping addAttributeMappingsFromArray:@[@"output"]];
     
-    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[OracaoFeita  class] rootKeyPath:nil method:RKRequestMethodPUT];
+    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[OracaoFeita class] rootKeyPath:nil method:RKRequestMethodPUT];
     
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping
                                                                                             method:RKRequestMethodPUT

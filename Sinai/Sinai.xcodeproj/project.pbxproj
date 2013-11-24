@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D2711DB3DEB46899D4D0CC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105C1F8614E42DDBC5028F6 /* libPods.a */; };
+		6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E01964E1841327C00ACACE7 /* ControleTeclado.m */; };
+		6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E01964F1841327C00ACACE7 /* ControleTeclado.xib */; };
 		6E0361711839B5A600748088 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0361701839B5A600748088 /* User.m */; };
 		6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */; };
@@ -23,6 +25,8 @@
 		6E5A365D1839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
 		6E5A36651839B236009B7ED5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A36631839B236009B7ED5 /* InfoPlist.strings */; };
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
+		6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */; };
+		6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */; };
 		6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */; };
 		6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9139BE183C2B400090FEE3 /* OracaoFeita.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
@@ -45,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		0352E7E43A384758B6266DBE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6E01964D1841327C00ACACE7 /* ControleTeclado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleTeclado.h; sourceTree = "<group>"; };
+		6E01964E1841327C00ACACE7 /* ControleTeclado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleTeclado.m; sourceTree = "<group>"; };
+		6E01964F1841327C00ACACE7 /* ControleTeclado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControleTeclado.xib; sourceTree = "<group>"; };
 		6E03616F1839B5A600748088 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6E0361701839B5A600748088 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		6E5A36381839B236009B7ED5 /* Sinai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinai.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +73,10 @@
 		6E5A36621839B236009B7ED5 /* SinaiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SinaiTests-Info.plist"; sourceTree = "<group>"; };
 		6E5A36641839B236009B7ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E5A36661839B236009B7ED5 /* SinaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaiTests.m; sourceTree = "<group>"; };
+		6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPostViewController.h; sourceTree = "<group>"; };
 		6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPostViewController.m; sourceTree = "<group>"; };
 		6E9139BD183C2B400090FEE3 /* OracaoFeita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OracaoFeita.h; sourceTree = "<group>"; };
@@ -110,6 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E0196521841329F00ACACE7 /* ControleTeclado */ = {
+			isa = PBXGroup;
+			children = (
+				6E01964D1841327C00ACACE7 /* ControleTeclado.h */,
+				6E01964E1841327C00ACACE7 /* ControleTeclado.m */,
+				6E01964F1841327C00ACACE7 /* ControleTeclado.xib */,
+			);
+			name = ControleTeclado;
+			sourceTree = "<group>";
+		};
+		6E019653184132B600ACACE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E0196521841329F00ACACE7 /* ControleTeclado */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6E03616B1839B53A00748088 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +172,10 @@
 				6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */,
 				6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */,
 				6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */,
+				6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */,
+				6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */,
+				6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */,
+				6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 		6E5A36411839B236009B7ED5 /* Sinai */ = {
 			isa = PBXGroup;
 			children = (
+				6E019653184132B600ACACE7 /* Resources */,
 				6EC363D5183AAFD100610ECE /* MappingProvider */,
 				6E03616B1839B53A00748088 /* Model */,
 				6E03616D1839B54A00748088 /* Controller */,
@@ -315,6 +349,7 @@
 			files = (
 				6E5A36541839B236009B7ED5 /* Images.xcassets in Resources */,
 				6E5A36461839B236009B7ED5 /* InfoPlist.strings in Resources */,
+				6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */,
 				6E5A364F1839B236009B7ED5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +406,10 @@
 				6E964CAD1839B6D300515563 /* Login.m in Sources */,
 				6E0361711839B5A600748088 /* User.m in Sources */,
 				6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */,
+				6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */,
+				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,
 				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
+				6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */,
 				6E5A36521839B236009B7ED5 /* ViewController.m in Sources */,
 				6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */,
 				6E964CB01839B70300515563 /* MsgPost.m in Sources */,
