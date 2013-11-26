@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *nome;
+@property (strong, nonatomic) NSString *sobrenome;
 
 @end

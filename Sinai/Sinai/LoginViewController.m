@@ -16,8 +16,8 @@
 
 @interface LoginViewController ()<ControleTecladoDelegate>
 
-
 @property (strong, nonatomic) ControleTeclado *controleTeclado;
+
 @end
 
 @implementation LoginViewController
@@ -40,21 +40,9 @@
 {
     [super viewDidLoad];
     [super viewDidLoad];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
-}
-
-- (void)keyboardDidShow:(NSNotification *)notification
-{
-    [self.view setFrame:CGRectMake(0,-5,320,485)];
-}
-
--(void)keyboardDidHide:(NSNotification *)notification
-{
-    [self.view setFrame:CGRectMake(0,0,320,480)];
 }
 
 -(void)login{

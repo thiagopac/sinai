@@ -33,12 +33,11 @@
 
 -(NSArray *)inputsTextFieldAndTextViews
 {
-    return @[_txtEmail, _txtPassword, _txtPassword2];
+    return @[_txtPrimeiroNome, _txtUltimoNome, _txtEmail, _txtPassword, _txtPassword2];
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     [super viewDidLoad];
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     [[self controleTeclado]setDelegate:self];
@@ -46,26 +45,36 @@
 
 
 -(void)verificar{
-    if([_txtPassword.text length] > 5){
-        if ([_txtPassword.text isEqualToString:[_txtPassword2 text]]) {
-            [self registrar];
+    if(![_txtPrimeiroNome.text isEqualToString:@""]){
+        if(![_txtUltimoNome.text isEqualToString:@""]){
+            if([_txtPassword.text length] > 5){
+                if ([_txtPassword.text isEqualToString:[_txtPassword2 text]]) {
+                    [self registrar];
+                }else{
+                    [self alert:@"Os campos com senha devem ser idênticos" :@"Erro"];
+                    [SVProgressHUD dismiss];
+                }
+            }else{
+                [self alert:@"A senha deve ter no mínimo 6 caracteres" :@"Erro"];
+                [SVProgressHUD dismiss];
+            }
         }else{
-            [self alert:@"Os campos com senha devem ser idênticos" :@"Erro"];
+            [self alert:@"O campo Último Nome está em branco" :@"Erro"];
             [SVProgressHUD dismiss];
         }
-    }else{
-        [self alert:@"A senha deve ter no mínimo 6 caracteres" :@"Erro"];
-        [SVProgressHUD dismiss];
+     }else{
+         [self alert:@"O campo Primeiro Nome está em branco" :@"Erro"];
+         [SVProgressHUD dismiss];
     }
 }
 
 -(void)registrar{
     
     RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
-    [requestMapping addAttributeMappingsFromArray:@[@"email", @"password"]];
+    [requestMapping addAttributeMappingsFromArray:@[@"email", @"password", @"nome", @"sobrenome"]];
     
     RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[User class]];
-    [responseMapping addAttributeMappingsFromArray:@[@"iduser", @"email", @"erro"]];
+    [responseMapping addAttributeMappingsFromArray:@[@"iduser", @"email", @"nome", @"sobrenome", @"erro"]];
     
     RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[Login class] rootKeyPath:nil method:RKRequestMethodPOST];
     
@@ -85,8 +94,10 @@
     
     Login *login = [Login new];
     
-    login.email = self.txtEmail.text;
-    login.password = self.txtPassword.text;
+    login.email = _txtEmail.text;
+    login.password = _txtPassword.text;
+    login.nome = _txtPrimeiroNome.text;
+    login.sobrenome = _txtUltimoNome.text;
     
     [objectManager postObject:login
                          path:path

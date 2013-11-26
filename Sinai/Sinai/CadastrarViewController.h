@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CadastrarViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UITextField *txtPrimeiroNome;
+@property (strong, nonatomic) IBOutlet UITextField *txtUltimoNome;
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;
 @property (strong, nonatomic) IBOutlet UITextField *txtPassword;
 @property (strong, nonatomic) IBOutlet UITextField *txtPassword2;
