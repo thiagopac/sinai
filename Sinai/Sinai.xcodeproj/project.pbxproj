@@ -27,6 +27,7 @@
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
 		6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */; };
 		6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */; };
+		6E7BE9661842C1CE00B6F3E5 /* CadastrarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */; };
 		6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */; };
 		6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9139BE183C2B400090FEE3 /* OracaoFeita.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
@@ -77,6 +78,8 @@
 		6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		6E7BE9641842C1CE00B6F3E5 /* CadastrarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastrarViewController.h; sourceTree = "<group>"; };
+		6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastrarViewController.m; sourceTree = "<group>"; };
 		6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPostViewController.h; sourceTree = "<group>"; };
 		6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPostViewController.m; sourceTree = "<group>"; };
 		6E9139BD183C2B400090FEE3 /* OracaoFeita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OracaoFeita.h; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */,
 				6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */,
 				6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */,
+				6E7BE9641842C1CE00B6F3E5 /* CadastrarViewController.h */,
+				6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,
 				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
 				6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */,
+				6E7BE9661842C1CE00B6F3E5 /* CadastrarViewController.m in Sources */,
 				6E5A36521839B236009B7ED5 /* ViewController.m in Sources */,
 				6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */,
 				6E964CB01839B70300515563 /* MsgPost.m in Sources */,

@@ -70,12 +70,14 @@
     
     objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
     
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    
     MsgPost *msgpost = [MsgPost new];
     msgpost.descricao = self.lblMsgPost.text;
     msgpost.validade = [self checaValidade];
     [self checaIdioma:opcoesIdioma];
     msgpost.idioma = stringIdioma;
-    msgpost.iduser = 1;
+    msgpost.iduser = [def integerForKey:@"iduser"];
     
     [objectManager postObject:msgpost
                         path:path
@@ -84,6 +86,8 @@
                          if(mappingResult != nil){
                              MsgPost *msgRecebida = [mappingResult firstObject];
                              NSLog(@"msg : %d",msgRecebida.idmsg);
+                             [SVProgressHUD showSuccessWithStatus:@"Enviado!"];
+                             [self.lblMsgPost setText:@""];
                              [SVProgressHUD dismiss];
                              [self dismissViewControllerAnimated:YES completion:nil];
                          }else{

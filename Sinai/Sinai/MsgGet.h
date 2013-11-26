@@ -13,5 +13,7 @@
 @property (assign, nonatomic) NSInteger idmsg;
 @property (strong, nonatomic) NSString *descricao;
 @property (strong, nonatomic) NSNumber *oracoes;
+@property (strong, nonatomic) NSString *nome;
+@property (strong, nonatomic) NSString *sobrenome;
 
 @end

@@ -57,7 +57,12 @@
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         msgget = mappingResult.firstObject;
         NSLog(@"msg = %@",msgget.descricao);
-        self.lblMsgGet.text = msgget.descricao;
+        
+        
+        //trazer o nome e o sobrenome da pessoa para a mensagem
+        NSString *msgCompleta = [NSString stringWithFormat:@"%@\r\r%@ %@",msgget.descricao,msgget.nome,msgget.sobrenome];
+        
+        self.lblMsgGet.text = msgCompleta;
         [[self lblMsgGet] setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
         [[self lblMsgGet]setTextAlignment:NSTextAlignmentCenter];
         [[self lblMsgGet] setTextColor:[UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1]];

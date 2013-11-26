@@ -18,7 +18,7 @@
 
 + (RKMapping *)userMapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[User class]];
-    [mapping addAttributeMappingsFromArray:@[@"iduser", @"email"]];
+    [mapping addAttributeMappingsFromArray:@[@"iduser", @"email", @"nome", @"sobrenome"]];
     return mapping;
 }
 
@@ -38,7 +38,7 @@
 
 + (RKMapping *)msgGetMapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[MsgGet class]];
-    [mapping addAttributeMappingsFromArray:@[@"idmsg", @"descricao", @"oracoes"]];
+    [mapping addAttributeMappingsFromArray:@[@"idmsg", @"descricao", @"oracoes", @"nome", @"sobrenome"]];
     
     return mapping;
 }

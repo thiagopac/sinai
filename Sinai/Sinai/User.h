@@ -12,5 +12,8 @@
 
 @property (assign, nonatomic) NSInteger iduser;
 @property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *nome;
+@property (strong, nonatomic) NSString *sobrenome;
+@property (strong, nonatomic) NSString *erro;
 
 @end

@@ -1,12 +1,12 @@
 //
-//  LoginViewController.m
+//  CadastrarViewController.m
 //  Sinai
 //
 //  Created by Thiago Castro on 24/11/13.
 //  Copyright (c) 2013 Thiago Castro. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "CadastrarViewController.h"
 #import "Login.h"
 #import "User.h"
 #import <RestKit/RestKit.h>
@@ -14,13 +14,13 @@
 #import <SVProgressHUD.h>
 #import "ControleTeclado.h"
 
-@interface LoginViewController ()<ControleTecladoDelegate>
-
+@interface CadastrarViewController ()<ControleTecladoDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) ControleTeclado *controleTeclado;
+
 @end
 
-@implementation LoginViewController
+@implementation CadastrarViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,37 +33,39 @@
 
 -(NSArray *)inputsTextFieldAndTextViews
 {
-    return @[_txtEmail, _txtPassword];
+    return @[_txtEmail, _txtPassword, _txtPassword2];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [super viewDidLoad];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
     [self setControleTeclado:[[ControleTeclado alloc] init]];
-    
     [[self controleTeclado]setDelegate:self];
 }
 
-- (void)keyboardDidShow:(NSNotification *)notification
-{
-    [self.view setFrame:CGRectMake(0,-5,320,485)];
+
+-(void)verificar{
+    if([_txtPassword.text length] > 5){
+        if ([_txtPassword.text isEqualToString:[_txtPassword2 text]]) {
+            [self registrar];
+        }else{
+            [self alert:@"Os campos com senha devem ser idênticos" :@"Erro"];
+            [SVProgressHUD dismiss];
+        }
+    }else{
+        [self alert:@"A senha deve ter no mínimo 6 caracteres" :@"Erro"];
+        [SVProgressHUD dismiss];
+    }
 }
 
--(void)keyboardDidHide:(NSNotification *)notification
-{
-    [self.view setFrame:CGRectMake(0,0,320,480)];
-}
-
--(void)login{
+-(void)registrar{
     
     RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
     [requestMapping addAttributeMappingsFromArray:@[@"email", @"password"]];
     
     RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[User class]];
-    [responseMapping addAttributeMappingsFromArray:@[@"iduser", @"email"]];
+    [responseMapping addAttributeMappingsFromArray:@[@"iduser", @"email", @"erro"]];
     
     RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[Login class] rootKeyPath:nil method:RKRequestMethodPOST];
     
@@ -73,7 +75,7 @@
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/validauser";
+    NSString  *path= @"sinai/webservice/adduser";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];
@@ -93,16 +95,22 @@
                           if(mappingResult != nil){
                               User *userLogged = [mappingResult firstObject];
                               NSLog(@"email : %@",userLogged.email);
-                              NSUserDefaults  *def = [NSUserDefaults standardUserDefaults ];
-                              [def setObject:userLogged.email forKey:@"email"];
-                              [def setInteger:userLogged.iduser forKey:@"iduser"];
-                              [def synchronize];
+                              NSLog(@"erro : %@",userLogged.erro);
+                              if (userLogged.erro != nil) {
+                                  [SVProgressHUD dismiss];
+                                  [self alert:@"Este e-mail já está cadastrado" :@"Erro"];
+                              }else{
+                                  [SVProgressHUD dismiss];
+                                  [SVProgressHUD showSuccessWithStatus:@"Cadastrado com sucesso!"];
+                                  [NSTimer scheduledTimerWithTimeInterval:3 target:self
+                                                                 selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
+                                  
+                                  [self dismissViewControllerAnimated:YES completion:nil];
+                              }
                               
-                              [SVProgressHUD dismiss];
-                              [self dismissViewControllerAnimated:YES completion:nil];
                           }else{
                               [SVProgressHUD dismiss];
-                              [self alert:@"E-mail e/ou senha incorretos" :@"Erro"];
+                              [self alert:@"Tente novamente mais tarde" :@"Erro"];
                               [self.view endEditing:YES];
                           }
                           
@@ -116,16 +124,19 @@
     
 }
 
+-(void)dismissAfterSuccess:(NSTimer*)timer {
+    [SVProgressHUD dismiss];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnLogin:(UIButton *)sender {
+- (IBAction)btnRegistrar:(UIButton *)sender {
     [SVProgressHUD show];
-    [self login];
-    //[self.view endEditing:YES];
+    [self verificar];
 }
 
 - (IBAction)btnCancelar:(UIButton *)sender {
@@ -140,9 +151,4 @@
 }
 
 
-- (IBAction)btnEsqueciSenha:(UIButton *)sender {
-}
-
-- (IBAction)btnNotUserYet:(UIButton *)sender {
-}
 @end

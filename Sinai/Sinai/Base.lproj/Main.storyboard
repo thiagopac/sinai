@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cadastrar View Controller-->
         <scene sceneID="iM1-vG-18K">
             <objects>
-                <viewController id="yKd-vi-qxD" sceneMemberID="viewController">
+                <viewController id="yKd-vi-qxD" customClass="CadastrarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mq6-w1-zAi"/>
                         <viewControllerLayoutGuide type="bottom" id="KxX-aP-Hlj"/>
@@ -43,6 +43,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnRegistrar:" destination="yKd-vi-qxD" eventType="touchUpInside" id="AnV-Zl-exU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTQ-DW-zDb">
                                 <rect key="frame" x="166" y="279" width="121" height="50"/>
@@ -53,10 +56,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnCancelar:" destination="yKd-vi-qxD" eventType="touchUpInside" id="ufI-sy-bbp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="8Nc-A4-akf" id="RnX-Hf-vqd"/>
+                        <outlet property="txtPassword" destination="nc7-ij-lvB" id="6Ef-9T-bUm"/>
+                        <outlet property="txtPassword2" destination="iUg-w2-91Y" id="Cr8-nv-gmE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gza-TG-Bl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,6 +143,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnNotUserYet:" destination="BXw-ch-oiz" eventType="touchUpInside" id="k1g-tD-UGv"/>
+                                    <segue destination="yKd-vi-qxD" kind="modal" id="8dO-ES-ZcU"/>
                                 </connections>
                             </button>
                         </subviews>
