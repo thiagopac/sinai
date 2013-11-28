@@ -15,5 +15,7 @@
 @property (strong, nonatomic) NSNumber *oracoes;
 @property (strong, nonatomic) NSString *nome;
 @property (strong, nonatomic) NSString *sobrenome;
+@property (strong, nonatomic) NSString *criacao;
+@property (strong, nonatomic) NSString *validade;
 
 @end

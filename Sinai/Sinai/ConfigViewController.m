@@ -8,6 +8,7 @@
 
 #import "ConfigViewController.h"
 #import "LoginViewController.h"
+#import <SVProgressHUD.h>
 
 @interface ConfigViewController ()
 
@@ -36,18 +37,19 @@
         [def removeObjectForKey:key];
     }
     [def synchronize];
-        [self.btnLoginOutlet setTitle:@"Fazer login" forState:UIControlStateNormal];
+    [self.btnLoginOutlet setTitle:@"FAZER LOGIN" forState:UIControlStateNormal];
     self.lblEmail.text = nil;
+    [SVProgressHUD dismiss];
     
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     if([def objectForKey:@"email"]){
-        [self.btnLoginOutlet setTitle:@"Logout" forState:UIControlStateNormal];
+        [self.btnLoginOutlet setTitle:@"LOGOUT" forState:UIControlStateNormal];
         self.lblEmail.text = [def objectForKey:@"email"];
     }else{
-        [self.btnLoginOutlet setTitle:@"Fazer login" forState:UIControlStateNormal];
+        [self.btnLoginOutlet setTitle:@"FAZER LOGIN" forState:UIControlStateNormal];
         self.lblEmail.text = nil;
     }
 }
@@ -68,6 +70,7 @@
         [loginVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
         [self presentViewController:loginVC animated:YES completion:nil];
     }else{
+        [SVProgressHUD show];
         [self resetDefaults];
     }
 }

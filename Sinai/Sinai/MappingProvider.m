@@ -38,7 +38,7 @@
 
 + (RKMapping *)msgGetMapping {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[MsgGet class]];
-    [mapping addAttributeMappingsFromArray:@[@"idmsg", @"descricao", @"oracoes", @"nome", @"sobrenome"]];
+    [mapping addAttributeMappingsFromArray:@[@"idmsg", @"descricao", @"oracoes", @"nome", @"sobrenome", @"criacao", @"validade"]];
     
     return mapping;
 }

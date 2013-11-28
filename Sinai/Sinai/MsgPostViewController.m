@@ -13,9 +13,10 @@
 #import <SVProgressHUD.h>
 #import "ControleTeclado.h"
 
-@interface MsgPostViewController ()<ControleTecladoDelegate>{
+@interface MsgPostViewController ()<ControleTecladoDelegate, UITextViewDelegate>{
     int valorValidade;
     IBOutlet UISegmentedControl *opcoesIdioma;
+    IBOutlet UILabel *lblCharCounter;
     IBOutlet UISlider *sliderValidade;
     NSString *stringIdioma;
 }
@@ -86,10 +87,10 @@
                          if(mappingResult != nil){
                              MsgPost *msgRecebida = [mappingResult firstObject];
                              NSLog(@"msg : %d",msgRecebida.idmsg);
-                             [SVProgressHUD showSuccessWithStatus:@"Enviado!"];
+                             [SVProgressHUD showSuccessWithStatus:@"Enviado com sucesso!"];
+                             [NSTimer scheduledTimerWithTimeInterval:3 target:self
+                                                            selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
                              [self.lblMsgPost setText:@""];
-                             [SVProgressHUD dismiss];
-                             [self dismissViewControllerAnimated:YES completion:nil];
                          }else{
                              [SVProgressHUD dismiss];
                              NSLog(@"Erro, nenhuma resposta!");
@@ -100,6 +101,10 @@
                          NSLog(@"Error: %@", error);
                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
                      }];
+}
+
+-(void)dismissAfterSuccess:(NSTimer*)timer {
+    [SVProgressHUD dismiss];
 }
 
 - (void)didReceiveMemoryWarning
@@ -150,6 +155,37 @@
 
 -(void)alteraLabelDias{
     [[self lblDiasValidade]setText:[NSString stringWithFormat:@"%d",(int)round(sliderValidade.value)]];
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    
+    //create NSString containing the text from the UITextView
+    NSString *substring = [NSString stringWithString:_lblMsgPost.text];
+    
+    //if message has text show label and update with number of characters using the NSString.length function
+    if (substring.length > 0) {
+        lblCharCounter.hidden = NO;
+        lblCharCounter.text = [NSString stringWithFormat:@"%d", substring.length];
+    }
+    
+    //if message has no text hide label
+    if (substring.length == 0) {
+        lblCharCounter.hidden = YES;
+    }
+    
+    //if message length is equal to 15 characters display alert view
+    if (substring.length == 141) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Limite de 140 caracteres" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        //if character count is over max number change label to red text
+        lblCharCounter.textColor = [UIColor redColor];
+    }
+    
+    //if message is less than 512 characters change font to black
+    if (substring.length < 141) {
+        lblCharCounter.textColor = [UIColor blackColor];
+    }
 }
 
 @end

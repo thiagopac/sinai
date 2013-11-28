@@ -11,6 +11,7 @@
 		6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E01964E1841327C00ACACE7 /* ControleTeclado.m */; };
 		6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E01964F1841327C00ACACE7 /* ControleTeclado.xib */; };
 		6E0361711839B5A600748088 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0361701839B5A600748088 /* User.m */; };
+		6E1F3F191846DB8800172714 /* IdiomaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */; };
 		6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */; };
 		6E5A36401839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
@@ -32,6 +33,8 @@
 		6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9139BE183C2B400090FEE3 /* OracaoFeita.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
 		6E964CB01839B70300515563 /* MsgPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* MsgPost.m */; };
+		6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */; };
+		6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */; };
 		6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363D7183AB02100610ECE /* MappingProvider.m */; };
 		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
 		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
@@ -55,6 +58,8 @@
 		6E01964F1841327C00ACACE7 /* ControleTeclado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControleTeclado.xib; sourceTree = "<group>"; };
 		6E03616F1839B5A600748088 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6E0361701839B5A600748088 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiomaTableViewController.h; sourceTree = "<group>"; };
+		6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiomaTableViewController.m; sourceTree = "<group>"; };
 		6E5A36381839B236009B7ED5 /* Sinai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A363B1839B236009B7ED5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +93,10 @@
 		6E964CAC1839B6D300515563 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		6E964CAE1839B70300515563 /* MsgPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPost.h; sourceTree = "<group>"; };
 		6E964CAF1839B70300515563 /* MsgPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPost.m; sourceTree = "<group>"; };
+		6EAE581718458DCC0071D4E2 /* MinhasMsgsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinhasMsgsTableViewController.h; sourceTree = "<group>"; };
+		6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhasMsgsTableViewController.m; sourceTree = "<group>"; };
+		6EAE581A1845A2F50071D4E2 /* MinhaMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinhaMsgCell.h; sourceTree = "<group>"; };
+		6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhaMsgCell.m; sourceTree = "<group>"; };
 		6EC363D6183AB02100610ECE /* MappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingProvider.h; sourceTree = "<group>"; };
 		6EC363D7183AB02100610ECE /* MappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingProvider.m; sourceTree = "<group>"; };
 		6EC363D9183AB2A500610ECE /* MsgGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGet.h; sourceTree = "<group>"; };
@@ -164,6 +173,8 @@
 		6E03616C1839B54400748088 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6EAE581A1845A2F50071D4E2 /* MinhaMsgCell.h */,
+				6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -181,6 +192,10 @@
 				6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */,
 				6E7BE9641842C1CE00B6F3E5 /* CadastrarViewController.h */,
 				6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */,
+				6EAE581718458DCC0071D4E2 /* MinhasMsgsTableViewController.h */,
+				6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */,
+				6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */,
+				6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -408,8 +423,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EC363E1183B002000610ECE /* Output.m in Sources */,
+				6E1F3F191846DB8800172714 /* IdiomaTableViewController.m in Sources */,
 				6E964CAD1839B6D300515563 /* Login.m in Sources */,
 				6E0361711839B5A600748088 /* User.m in Sources */,
+				6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */,
+				6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */,
 				6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */,
 				6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */,
 				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,

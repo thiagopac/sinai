@@ -112,7 +112,6 @@
                               Output *success = [mappingResult firstObject];
                               NSLog(@"msg : %@",success.output);
                               [SVProgressHUD dismiss];
-                              [self dismissViewControllerAnimated:YES completion:nil];
                           }else{
                               [SVProgressHUD dismiss];
                               NSLog(@"Erro, nenhuma resposta!");

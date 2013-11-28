@@ -10,11 +10,8 @@
 
 @interface MsgPostViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgPost;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *btnIdioma;
 @property (strong, nonatomic) IBOutlet UISlider *btnValidade;
-
 - (IBAction)btnIdioma:(UISegmentedControl *)sender;
-
 - (IBAction)btnValidade:(UISlider *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblDiasValidade;
 
