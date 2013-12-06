@@ -38,6 +38,8 @@
     }
     [def synchronize];
     [self.btnLoginOutlet setTitle:@"FAZER LOGIN" forState:UIControlStateNormal];
+    _btnMeusPedidos.enabled = NO;
+    _btnMeusPedidos.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
     self.lblEmail.text = nil;
     [SVProgressHUD dismiss];
     
@@ -47,9 +49,14 @@
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     if([def objectForKey:@"email"]){
         [self.btnLoginOutlet setTitle:@"LOGOUT" forState:UIControlStateNormal];
+        _btnMeusPedidos.backgroundColor = [UIColor colorWithRed:0.20 green:0.60 blue:0.80 alpha:1.0];
+        _btnMeusPedidos.enabled = YES;
+        _btnMeusPedidos.alpha = 1;
         self.lblEmail.text = [def objectForKey:@"email"];
     }else{
         [self.btnLoginOutlet setTitle:@"FAZER LOGIN" forState:UIControlStateNormal];
+        _btnMeusPedidos.enabled = NO;
+        _btnMeusPedidos.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
         self.lblEmail.text = nil;
     }
 }

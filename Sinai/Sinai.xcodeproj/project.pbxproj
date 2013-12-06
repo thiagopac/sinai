@@ -12,6 +12,8 @@
 		6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E01964F1841327C00ACACE7 /* ControleTeclado.xib */; };
 		6E0361711839B5A600748088 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0361701839B5A600748088 /* User.m */; };
 		6E1F3F191846DB8800172714 /* IdiomaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */; };
+		6E1F3F1C1847EF6800172714 /* Idioma.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F3F1B1847EF6800172714 /* Idioma.m */; };
+		6E40A4FA184C21220077F0D8 /* RelembrarSenhaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */; };
 		6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */; };
 		6E5A36401839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 		6E964CB01839B70300515563 /* MsgPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* MsgPost.m */; };
 		6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */; };
 		6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */; };
+		6EB86043185234F1008A1F21 /* orar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB86041185234F1008A1F21 /* orar.png */; };
+		6EB86044185234F1008A1F21 /* orar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB86042185234F1008A1F21 /* orar@2x.png */; };
+		6EB86046185237C7008A1F21 /* proxima@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB86045185237C7008A1F21 /* proxima@2x.png */; };
+		6EB86048185237DA008A1F21 /* proxima.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB86047185237DA008A1F21 /* proxima.png */; };
 		6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363D7183AB02100610ECE /* MappingProvider.m */; };
 		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
 		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
@@ -60,6 +66,10 @@
 		6E0361701839B5A600748088 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiomaTableViewController.h; sourceTree = "<group>"; };
 		6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiomaTableViewController.m; sourceTree = "<group>"; };
+		6E1F3F1A1847EF6800172714 /* Idioma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Idioma.h; sourceTree = "<group>"; };
+		6E1F3F1B1847EF6800172714 /* Idioma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Idioma.m; sourceTree = "<group>"; };
+		6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelembrarSenhaViewController.h; sourceTree = "<group>"; };
+		6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelembrarSenhaViewController.m; sourceTree = "<group>"; };
 		6E5A36381839B236009B7ED5 /* Sinai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A363B1839B236009B7ED5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,6 +107,10 @@
 		6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhasMsgsTableViewController.m; sourceTree = "<group>"; };
 		6EAE581A1845A2F50071D4E2 /* MinhaMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinhaMsgCell.h; sourceTree = "<group>"; };
 		6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhaMsgCell.m; sourceTree = "<group>"; };
+		6EB86041185234F1008A1F21 /* orar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orar.png; sourceTree = "<group>"; };
+		6EB86042185234F1008A1F21 /* orar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orar@2x.png"; sourceTree = "<group>"; };
+		6EB86045185237C7008A1F21 /* proxima@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proxima@2x.png"; sourceTree = "<group>"; };
+		6EB86047185237DA008A1F21 /* proxima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proxima.png; sourceTree = "<group>"; };
 		6EC363D6183AB02100610ECE /* MappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingProvider.h; sourceTree = "<group>"; };
 		6EC363D7183AB02100610ECE /* MappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingProvider.m; sourceTree = "<group>"; };
 		6EC363D9183AB2A500610ECE /* MsgGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGet.h; sourceTree = "<group>"; };
@@ -146,6 +160,10 @@
 		6E019653184132B600ACACE7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6EB86047185237DA008A1F21 /* proxima.png */,
+				6EB86045185237C7008A1F21 /* proxima@2x.png */,
+				6EB86041185234F1008A1F21 /* orar.png */,
+				6EB86042185234F1008A1F21 /* orar@2x.png */,
 				6E0196521841329F00ACACE7 /* ControleTeclado */,
 			);
 			name = Resources;
@@ -166,6 +184,8 @@
 				6EC363E0183B002000610ECE /* Output.m */,
 				6E9139BD183C2B400090FEE3 /* OracaoFeita.h */,
 				6E9139BE183C2B400090FEE3 /* OracaoFeita.m */,
+				6E1F3F1A1847EF6800172714 /* Idioma.h */,
+				6E1F3F1B1847EF6800172714 /* Idioma.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -196,6 +216,8 @@
 				6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */,
 				6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */,
 				6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */,
+				6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */,
+				6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -368,9 +390,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5A36541839B236009B7ED5 /* Images.xcassets in Resources */,
+				6EB86043185234F1008A1F21 /* orar.png in Resources */,
+				6EB86044185234F1008A1F21 /* orar@2x.png in Resources */,
 				6E5A36461839B236009B7ED5 /* InfoPlist.strings in Resources */,
 				6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */,
 				6E5A364F1839B236009B7ED5 /* Main.storyboard in Resources */,
+				6EB86048185237DA008A1F21 /* proxima.png in Resources */,
+				6EB86046185237C7008A1F21 /* proxima@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +454,7 @@
 				6E0361711839B5A600748088 /* User.m in Sources */,
 				6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */,
 				6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */,
+				6E1F3F1C1847EF6800172714 /* Idioma.m in Sources */,
 				6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */,
 				6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */,
 				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,
@@ -438,6 +465,7 @@
 				6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */,
 				6E964CB01839B70300515563 /* MsgPost.m in Sources */,
 				6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */,
+				6E40A4FA184C21220077F0D8 /* RelembrarSenhaViewController.m in Sources */,
 				6E5A364C1839B236009B7ED5 /* AppDelegate.m in Sources */,
 				6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */,
 				6E5A36481839B236009B7ED5 /* main.m in Sources */,

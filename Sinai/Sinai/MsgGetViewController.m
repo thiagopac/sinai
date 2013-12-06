@@ -16,6 +16,7 @@
 
 @interface MsgGetViewController (){
     MsgGet *msgget;
+    NSString *idioma;
 }
 
 @property (strong, nonatomic) Output *outputObj;
@@ -36,11 +37,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [_lblMsgGet addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
     [SVProgressHUD show];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [self loadMsgGet];
     });
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    UITextView *tv = object;
+    CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height * [tv zoomScale])/2.0;
+    topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
+    tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
 }
 
 - (void)loadMsgGet {
@@ -50,7 +59,14 @@
     
     //COLOCAR ABAIXO A VARIÁVEL DE IDIOMA PARA TRAZER DINAMICAMENTE APÓS O USUÁRIO TER SELECIONADO O IDIOMA NO APP
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost/sinai/webservice/msg/pt"]];
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    if([def objectForKey:@"siglaIdioma"]){
+        idioma = [def objectForKey:@"siglaIdioma"];
+    }else{
+        idioma = @"PT";
+    }
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost/sinai/webservice/msg/%@",idioma]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
                                                                         responseDescriptors:@[responseDescriptor]];
@@ -64,7 +80,7 @@
         
         self.lblMsgGet.text = msgCompleta;
         [[self lblMsgGet] setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
-        [[self lblMsgGet]setTextAlignment:NSTextAlignmentCenter];
+        [[self lblMsgGet] setTextAlignment:NSTextAlignmentCenter];
         [[self lblMsgGet] setTextColor:[UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1]];
         [SVProgressHUD dismiss];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {

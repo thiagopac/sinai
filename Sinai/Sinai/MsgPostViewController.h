@@ -14,5 +14,8 @@
 - (IBAction)btnIdioma:(UISegmentedControl *)sender;
 - (IBAction)btnValidade:(UISlider *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblDiasValidade;
+@property (strong, nonatomic) IBOutlet UIButton *btnLogin;
+@property (strong, nonatomic) IBOutlet UIView *viewBloqueio;
+- (IBAction)btnLogin:(UIButton *)sender;
 
 @end

@@ -12,6 +12,7 @@
 #import "MappingProvider.h"
 #import <SVProgressHUD.h>
 #import "ControleTeclado.h"
+#import "LoginViewController.h"
 
 @interface MsgPostViewController ()<ControleTecladoDelegate, UITextViewDelegate>{
     int valorValidade;
@@ -45,6 +46,16 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    
+    if([def objectForKey:@"email"]){
+        self.viewBloqueio.hidden = YES;
+    }else{
+        self.viewBloqueio.hidden = NO;
+    }
 }
 
 -(void)enviaMsg{
@@ -186,6 +197,13 @@
     if (substring.length < 141) {
         lblCharCounter.textColor = [UIColor blackColor];
     }
+}
+
+- (IBAction)btnLogin:(UIButton *)sender {
+    UIStoryboard *storyBoard = [self storyboard];
+    LoginViewController *loginVC  = [storyBoard instantiateViewControllerWithIdentifier:@"LoginVC"];
+    [loginVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 @end

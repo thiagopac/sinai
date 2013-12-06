@@ -7,6 +7,7 @@
 //
 
 #import "IdiomaTableViewController.h"
+#import "Idioma.h"
 
 @interface IdiomaTableViewController (){
     NSArray *arrayIdiomas;
@@ -30,24 +31,28 @@
 {
     [super viewDidLoad];
     
-    arrayIdiomas = [NSArray arrayWithObjects:
-                    [NSDictionary dictionaryWithObjectsAndKeys:
-                     @"Português", @"descricao", @"PT", @"sigla", @"1", @"id"
-                     , nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:
-                     @"English", @"descricao", @"EN", @"sigla", @"2", @"id"
-                     , nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:
-                     @"Español", @"descricao", @"ES", @"sigla", @"3", @"id"
-                     , nil]
-                    , nil
-                    ];
+    Idioma *portugues = [Idioma new];
+    portugues.descricao = @"Português";
+    portugues.sigla = @"PT";
+    
+    Idioma *english = [Idioma new];
+    english.descricao = @"English";
+    english.sigla = @"EN";
+    
+    Idioma *espanol = [Idioma new];
+    espanol.descricao = @"Español";
+    espanol.sigla = @"ES";
+    
+    arrayIdiomas = [[NSArray alloc]initWithObjects:portugues,english,espanol, nil];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [[self tableView]reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -67,14 +72,16 @@
     static NSString *CellIdentifier = @"IdiomaCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    if([checkedIndexPath isEqual:indexPath]){
+    Idioma *idioma = [arrayIdiomas objectAtIndex:indexPath.row];
+    [[cell textLabel]setText:[idioma descricao]];
+    
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    if ([[def objectForKey:@"siglaIdioma"] isEqualToString:idioma.sigla]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
-    else{
+        checkedIndexPath = indexPath;
+    }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    
-    [[cell textLabel] setText:[[arrayIdiomas objectAtIndex:indexPath.row] objectForKey:@"descricao"]];
     
     return cell;
 }
@@ -86,18 +93,16 @@
                                         cellForRowAtIndexPath:checkedIndexPath];
         uncheckCell.accessoryType = UITableViewCellAccessoryNone;
     }
+    
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     checkedIndexPath = indexPath;
     
-//    Cidade *cidade = [self.cidades objectAtIndex:indexPath.row];
-//    arrayIdiomas *
-//    
-//    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-//    [def setInteger:cidade.id forKey:@"idCidade"];
-//    [def setObject:cidade.descricao forKey:@"descricaoCidade"];
-//    [def synchronize];
-//    [self.navigationController popToRootViewControllerAnimated:YES];
+    Idioma *idioma = [arrayIdiomas objectAtIndex:indexPath.row];
+    
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    [def setObject:idioma.sigla forKey:@"siglaIdioma"];
+    [def synchronize];
 }
 
 @end

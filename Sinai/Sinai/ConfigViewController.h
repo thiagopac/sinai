@@ -10,6 +10,7 @@
 
 @interface ConfigViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *btnLoginOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnMeusPedidos;
 @property (strong, nonatomic) IBOutlet UILabel *lblEmail;
 - (IBAction)btnLoginLogout:(UIButton *)sender;
 
