@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface MsgPostViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgPost;
@@ -17,5 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnLogin;
 @property (strong, nonatomic) IBOutlet UIView *viewBloqueio;
 - (IBAction)btnLogin:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UILabel *lblIdiomaEscolhido;
+@property (strong, nonatomic) IBOutlet UIView *containerShadow;
 
 @end

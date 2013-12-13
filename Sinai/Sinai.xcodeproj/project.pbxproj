@@ -65,10 +65,6 @@
 		6EACE77918569B29004A952F /* password_txt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE74C18569B29004A952F /* password_txt@2x.png */; };
 		6EACE77A18569B29004A952F /* proxima.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE74D18569B29004A952F /* proxima.png */; };
 		6EACE77B18569B29004A952F /* proxima@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE74E18569B29004A952F /* proxima@2x.png */; };
-		6EACE77C18569B29004A952F /* orei_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75018569B29004A952F /* orei_tabbar.png */; };
-		6EACE77D18569B29004A952F /* orei_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75118569B29004A952F /* orei_tabbar@2x.png */; };
-		6EACE78018569B29004A952F /* pedir_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75418569B29004A952F /* pedir_tabbar.png */; };
-		6EACE78118569B29004A952F /* pedir_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75518569B29004A952F /* pedir_tabbar@2x.png */; };
 		6EACE78418569B29004A952F /* profile_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75818569B29004A952F /* profile_tabbar.png */; };
 		6EACE78518569B29004A952F /* profile_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75918569B29004A952F /* profile_tabbar@2x.png */; };
 		6EACE78818569B29004A952F /* user_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75C18569B29004A952F /* user_badge.png */; };
@@ -79,6 +75,10 @@
 		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
 		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
 		6EC363E1183B002000610ECE /* Output.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363E0183B002000610ECE /* Output.m */; };
+		6EC97E0B185A813100C1AFA8 /* orei_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC97E09185A813100C1AFA8 /* orei_tabbar.png */; };
+		6EC97E0C185A813100C1AFA8 /* orei_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC97E0A185A813100C1AFA8 /* orei_tabbar@2x.png */; };
+		6EC97E13185A983900C1AFA8 /* pedir_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC97E11185A983900C1AFA8 /* pedir_tabbar.png */; };
+		6EC97E14185A983900C1AFA8 /* pedir_tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EC97E12185A983900C1AFA8 /* pedir_tabbar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,10 +167,6 @@
 		6EACE74C18569B29004A952F /* password_txt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_txt@2x.png"; sourceTree = "<group>"; };
 		6EACE74D18569B29004A952F /* proxima.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proxima.png; sourceTree = "<group>"; };
 		6EACE74E18569B29004A952F /* proxima@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proxima@2x.png"; sourceTree = "<group>"; };
-		6EACE75018569B29004A952F /* orei_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orei_tabbar.png; sourceTree = "<group>"; };
-		6EACE75118569B29004A952F /* orei_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orei_tabbar@2x.png"; sourceTree = "<group>"; };
-		6EACE75418569B29004A952F /* pedir_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedir_tabbar.png; sourceTree = "<group>"; };
-		6EACE75518569B29004A952F /* pedir_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pedir_tabbar@2x.png"; sourceTree = "<group>"; };
 		6EACE75818569B29004A952F /* profile_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_tabbar.png; sourceTree = "<group>"; };
 		6EACE75918569B29004A952F /* profile_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_tabbar@2x.png"; sourceTree = "<group>"; };
 		6EACE75C18569B29004A952F /* user_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_badge.png; sourceTree = "<group>"; };
@@ -187,6 +183,10 @@
 		6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgGetViewController.m; sourceTree = "<group>"; };
 		6EC363DF183B002000610ECE /* Output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Output.h; sourceTree = "<group>"; };
 		6EC363E0183B002000610ECE /* Output.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Output.m; sourceTree = "<group>"; };
+		6EC97E09185A813100C1AFA8 /* orei_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orei_tabbar.png; path = ../mini/orei_tabbar.png; sourceTree = "<group>"; };
+		6EC97E0A185A813100C1AFA8 /* orei_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orei_tabbar@2x.png"; path = "../mini/orei_tabbar@2x.png"; sourceTree = "<group>"; };
+		6EC97E11185A983900C1AFA8 /* pedir_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedir_tabbar.png; sourceTree = "<group>"; };
+		6EC97E12185A983900C1AFA8 /* pedir_tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pedir_tabbar@2x.png"; sourceTree = "<group>"; };
 		9105C1F8614E42DDBC5028F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -410,10 +410,10 @@
 		6EACE74F18569B29004A952F /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				6EACE75018569B29004A952F /* orei_tabbar.png */,
-				6EACE75118569B29004A952F /* orei_tabbar@2x.png */,
-				6EACE75418569B29004A952F /* pedir_tabbar.png */,
-				6EACE75518569B29004A952F /* pedir_tabbar@2x.png */,
+				6EC97E09185A813100C1AFA8 /* orei_tabbar.png */,
+				6EC97E0A185A813100C1AFA8 /* orei_tabbar@2x.png */,
+				6EC97E11185A983900C1AFA8 /* pedir_tabbar.png */,
+				6EC97E12185A983900C1AFA8 /* pedir_tabbar@2x.png */,
 				6EACE75818569B29004A952F /* profile_tabbar.png */,
 				6EACE75918569B29004A952F /* profile_tabbar@2x.png */,
 			);
@@ -511,6 +511,7 @@
 				6EACE76318569B29004A952F /* esquecisenha@2x.png in Resources */,
 				6EACE77918569B29004A952F /* password_txt@2x.png in Resources */,
 				6EACE76818569B29004A952F /* login.png in Resources */,
+				6EC97E0B185A813100C1AFA8 /* orei_tabbar.png in Resources */,
 				6EACE77118569B29004A952F /* coracao@2x.png in Resources */,
 				6EACE76918569B29004A952F /* login@2x.png in Resources */,
 				6EACE76418569B29004A952F /* idomas.png in Resources */,
@@ -519,8 +520,8 @@
 				6EACE76718569B29004A952F /* login_txt@2x.png in Resources */,
 				6EACE76F18569B29004A952F /* balao@2x.png in Resources */,
 				6EACE77B18569B29004A952F /* proxima@2x.png in Resources */,
+				6EC97E14185A983900C1AFA8 /* pedir_tabbar@2x.png in Resources */,
 				6EACE76B18569B29004A952F /* logo@2x.png in Resources */,
-				6EACE77D18569B29004A952F /* orei_tabbar@2x.png in Resources */,
 				6EACE76C18569B29004A952F /* meuspedidos.png in Resources */,
 				6EACE78818569B29004A952F /* user_badge.png in Resources */,
 				6EACE77818569B29004A952F /* password_txt.png in Resources */,
@@ -528,18 +529,17 @@
 				6EACE77218569B29004A952F /* relogio.png in Resources */,
 				6EACE77718569B29004A952F /* orar@2x.png in Resources */,
 				6EACE76518569B29004A952F /* idomas@2x.png in Resources */,
+				6EC97E13185A983900C1AFA8 /* pedir_tabbar.png in Resources */,
 				6EACE75F18569B29004A952F /* cancelar@2x.png in Resources */,
 				6EACE75E18569B29004A952F /* cancelar.png in Resources */,
 				6EACE77518569B29004A952F /* novousuario@2x.png in Resources */,
 				6EACE76018569B29004A952F /* enviar.png in Resources */,
-				6EACE78018569B29004A952F /* pedir_tabbar.png in Resources */,
 				6EACE78918569B29004A952F /* user_badge@2x.png in Resources */,
 				6EACE77618569B29004A952F /* orar.png in Resources */,
 				6EACE78418569B29004A952F /* profile_tabbar.png in Resources */,
-				6EACE77C18569B29004A952F /* orei_tabbar.png in Resources */,
 				6EACE76D18569B29004A952F /* meuspedidos@2x.png in Resources */,
 				6EACE76218569B29004A952F /* esquecisenha.png in Resources */,
-				6EACE78118569B29004A952F /* pedir_tabbar@2x.png in Resources */,
+				6EC97E0C185A813100C1AFA8 /* orei_tabbar@2x.png in Resources */,
 				6E5A36461839B236009B7ED5 /* InfoPlist.strings in Resources */,
 				6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */,
 				6EACE76618569B29004A952F /* login_txt.png in Resources */,
