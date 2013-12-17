@@ -1,12 +1,12 @@
 //
-//  RelembrarSenhaViewController.m
+//  EditarSenhaViewController.m
 //  Sinai
 //
-//  Created by Thiago Castro on 02/12/13.
+//  Created by Thiago Castro on 16/12/13.
 //  Copyright (c) 2013 Thiago Castro. All rights reserved.
 //
 
-#import "RelembrarSenhaViewController.h"
+#import "EditarSenhaViewController.h"
 #import "Login.h"
 #import "Output.h"
 #import <RestKit/RestKit.h>
@@ -14,13 +14,18 @@
 #import <SVProgressHUD.h>
 #import "ControleTeclado.h"
 
-@interface RelembrarSenhaViewController ()<ControleTecladoDelegate>
+@interface EditarSenhaViewController ()<ControleTecladoDelegate>
 
 @property (strong, nonatomic) ControleTeclado *controleTeclado;
 
 @end
 
-@implementation RelembrarSenhaViewController
+@implementation EditarSenhaViewController
+
+-(NSArray *)inputsTextFieldAndTextViews
+{
+    return @[_txtEmail, _txtSenhaAtual, _txtNovaSenha];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,11 +36,6 @@
     return self;
 }
 
--(NSArray *)inputsTextFieldAndTextViews
-{
-    return @[_txtEmail];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,10 +44,10 @@
     [[self controleTeclado]setDelegate:self];
 }
 
--(void)redefinir{
+-(void)editar{
     
     RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
-    [requestMapping addAttributeMappingsFromArray:@[@"email"]];
+    [requestMapping addAttributeMappingsFromArray:@[@"email", @"password", @"passwordatual"]];
     
     RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[Output class]];
     [responseMapping addAttributeMappingsFromArray:@[@"output"]];
@@ -60,7 +60,7 @@
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/relembrarsenha";
+    NSString  *path= @"sinai/webservice/setarnovasenha";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];
@@ -71,34 +71,29 @@
     Login *login = [Login new];
     
     login.email = self.txtEmail.text;
-    login.password = @"teste";
+    login.password = self.txtNovaSenha.text;
+    login.passwordatual = self.txtSenhaAtual.text;
     
     [objectManager putObject:login
-                         path:path
-                   parameters:nil
-                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                          if(mappingResult != nil){
-                              Output *resposta = [mappingResult firstObject];
-                              NSLog(@"output : %@",resposta.output);
-                              [self alert:@"Sua senha foi redefinida. Verifique seu e-mail." :@"Alerta"];
-                              [SVProgressHUD dismiss];
-                          }else{
-                              [SVProgressHUD dismiss];
-                              [self alert:@"E-mail não cadastrado!" :@"Erro"];
-                              [self.view endEditing:YES];
-                          }
-                          
-                      }
-                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                          NSLog(@"Error: %@", error);
-                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
-                      }];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+                        path:path
+                  parameters:nil
+                     success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                         if(mappingResult != nil){
+                             Output *resposta = [mappingResult firstObject];
+                             NSLog(@"output : %@",resposta.output);
+                             [self alert:@"Sua senha foi alterada com êxito!" :@"Sucesso"];
+                             [SVProgressHUD dismiss];
+                         }else{
+                             [SVProgressHUD dismiss];
+                             [self alert:@"Ocorreu um erro! Verifique os dados preenchidos." :@"Erro"];
+                             [self.view endEditing:YES];
+                         }
+                         
+                     }
+                     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                         NSLog(@"Error: %@", error);
+                         [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                     }];
 }
 
 - (void) alert:(NSString *)msg :(NSString *)title
@@ -108,12 +103,19 @@
     [alertView show];
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (IBAction)btnEnviar:(UIButton *)sender {
     [SVProgressHUD show];
-    [self redefinir];
+    [self editar];
 }
 
 - (IBAction)btnCancelar:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

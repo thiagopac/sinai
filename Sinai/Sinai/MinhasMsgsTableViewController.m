@@ -37,6 +37,10 @@
     dispatch_async(queue, ^{
         [self loadMinhasMsgs];
     });
+    
+#pragma navigationbar
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)loadMinhasMsgs {
@@ -121,13 +125,13 @@
     NSComparisonResult result = [hoje compare:dataValidade];
     
     if(result == NSOrderedAscending)
-        cell.lblPublicacao.text = @"Em publicação";
+        cell.lblPublicacao.text = @"Ativo";
     else if(result==NSOrderedDescending)
-        cell.lblPublicacao.text = @"Vencido";
+        cell.lblPublicacao.text = @"Inativo";
     else
-        cell.lblPublicacao.text = @"Em publicação";
+        cell.lblPublicacao.text = @"Ativo";
     
-    [[cell lblMsg] setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:13]];
+    [[cell lblMsg] setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:12]];
 }
 
 @end

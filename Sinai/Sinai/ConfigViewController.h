@@ -14,6 +14,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnMeusPedidos;
 @property (strong, nonatomic) IBOutlet UILabel *lblEmail;
 - (IBAction)btnLoginLogout:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UIView *containerShadow;
 
 @end

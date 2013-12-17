@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSString *password;
 @property (strong, nonatomic) NSString *nome;
 @property (strong, nonatomic) NSString *sobrenome;
+@property (strong, nonatomic) NSString *passwordatual;
 
 @end

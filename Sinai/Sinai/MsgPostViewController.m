@@ -20,11 +20,30 @@
     IBOutlet UILabel *lblCharCounter;
     IBOutlet UISlider *sliderValidade;
     NSString *stringIdioma;
+    NSString *dias;
 }
 @property (nonatomic, strong) ControleTeclado *controleTeclado;
 @end
 
 @implementation MsgPostViewController
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([_lblMsgPost.text isEqualToString:@"Digite seu pedido..."]) {
+        _lblMsgPost.text = @"";
+        _lblMsgPost.textColor = [UIColor grayColor];
+    }
+    [_lblMsgPost becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([_lblMsgPost.text isEqualToString:@""]) {
+        _lblMsgPost.text = @"Digite seu pedido...";
+        _lblMsgPost.textColor = [UIColor lightTextColor];
+    }
+    [_lblMsgPost resignFirstResponder];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,44 +66,15 @@
     
     [[self controleTeclado]setDelegate:self];
 
-#pragma c
+#pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
-#pragma Container com sombra
-    //Adds a shadow to sampleView
-    CALayer *layer = self.containerShadow.layer;
     
-    //changed to zero for the new fancy shadow
-    layer.shadowOffset = CGSizeZero;
-    
-    layer.shadowColor = [[UIColor blackColor] CGColor];
-    
-    //changed for the fancy shadow
-    layer.shadowRadius = 2.0f;
-    
-    layer.shadowOpacity = 0.50f;
-    
-    //call our new fancy shadow method
-    layer.shadowPath = [self fancyShadowForRect:layer.bounds];
-}
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
 
-- (CGPathRef)fancyShadowForRect:(CGRect)rect
-{
-    CGSize size = rect.size;
-    UIBezierPath* path = [UIBezierPath bezierPath];
-    
-    //right
-    [path moveToPoint:CGPointZero];
-    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
-    [path addLineToPoint:CGPointMake(size.width, size.height + 5.0f)];
-    
-    //curved bottom
-    [path addCurveToPoint:CGPointMake(0.0, size.height + 5.0f)
-            controlPoint1:CGPointMake(size.width - 5.0f, size.height)
-            controlPoint2:CGPointMake(5.0f, size.height)];
-    
-    [path closePath];
-    
-    return path.CGPath;
+#pragma uitextview fake placeholder
+    _lblMsgPost.delegate = self;
+    _lblMsgPost.text = @"Digite seu pedido...";
+    _lblMsgPost.textColor = [UIColor grayColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -207,7 +197,12 @@
 }
 
 -(void)alteraLabelDias{
-    [[self lblDiasValidade]setText:[NSString stringWithFormat:@"%d",(int)round(sliderValidade.value)]];
+    if(((int)round(sliderValidade.value))>1){
+        dias = @"dias";
+    }else{
+        dias = @"dia";
+    }
+    [[self lblDiasValidade]setText:[NSString stringWithFormat:@"%d %@",(int)round(sliderValidade.value),dias]];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
@@ -237,7 +232,7 @@
     
     //if message is less than 512 characters change font to black
     if (substring.length < 141) {
-        lblCharCounter.textColor = [UIColor blackColor];
+        lblCharCounter.textColor = [UIColor grayColor];
     }
 }
 

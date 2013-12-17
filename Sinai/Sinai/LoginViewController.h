@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 @interface LoginViewController : UIViewController
 
@@ -17,7 +16,5 @@
 - (IBAction)btnCancelar:(UIButton *)sender;
 - (IBAction)btnEsqueciSenha:(UIButton *)sender;
 - (IBAction)btnNotUserYet:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UIView *containerShadow;
-
 
 @end

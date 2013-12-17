@@ -71,6 +71,7 @@
 		6EACE78918569B29004A952F /* user_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EACE75D18569B29004A952F /* user_badge@2x.png */; };
 		6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */; };
 		6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */; };
+		6EBFF876185FDFA400062D0A /* EditarSenhaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBFF875185FDFA400062D0A /* EditarSenhaViewController.m */; };
 		6EC363D8183AB02100610ECE /* MappingProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363D7183AB02100610ECE /* MappingProvider.m */; };
 		6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DA183AB2A500610ECE /* MsgGet.m */; };
 		6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */; };
@@ -175,6 +176,8 @@
 		6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhasMsgsTableViewController.m; sourceTree = "<group>"; };
 		6EAE581A1845A2F50071D4E2 /* MinhaMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinhaMsgCell.h; sourceTree = "<group>"; };
 		6EAE581B1845A2F50071D4E2 /* MinhaMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinhaMsgCell.m; sourceTree = "<group>"; };
+		6EBFF874185FDFA400062D0A /* EditarSenhaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditarSenhaViewController.h; sourceTree = "<group>"; };
+		6EBFF875185FDFA400062D0A /* EditarSenhaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditarSenhaViewController.m; sourceTree = "<group>"; };
 		6EC363D6183AB02100610ECE /* MappingProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingProvider.h; sourceTree = "<group>"; };
 		6EC363D7183AB02100610ECE /* MappingProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingProvider.m; sourceTree = "<group>"; };
 		6EC363D9183AB2A500610ECE /* MsgGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgGet.h; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */,
 				6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */,
 				6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */,
+				6EBFF874185FDFA400062D0A /* EditarSenhaViewController.h */,
+				6EBFF875185FDFA400062D0A /* EditarSenhaViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -609,6 +614,7 @@
 				6E1F3F1C1847EF6800172714 /* Idioma.m in Sources */,
 				6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */,
 				6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */,
+				6EBFF876185FDFA400062D0A /* EditarSenhaViewController.m in Sources */,
 				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,
 				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
 				6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */,

@@ -44,9 +44,11 @@
         [self loadMsgGet];
     });
     
-#pragma c
+#pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
-    
+
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+
 #pragma Container com sombra
     //Adds a shadow to sampleView
     CALayer *layer = self.containerShadow.layer;
@@ -117,7 +119,7 @@
         NSString *msgCompleta = [NSString stringWithFormat:@"%@\r\r%@ %@",msgget.descricao,msgget.nome,msgget.sobrenome];
         
         self.lblMsgGet.text = msgCompleta;
-        [[self lblMsgGet] setFont:[UIFont fontWithName:@"TrebuchetMS" size:17]];
+        [[self lblMsgGet] setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:17]];
         [[self lblMsgGet] setTextAlignment:NSTextAlignmentCenter];
         [[self lblMsgGet] setTextColor:[UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1]];
         [SVProgressHUD dismiss];
