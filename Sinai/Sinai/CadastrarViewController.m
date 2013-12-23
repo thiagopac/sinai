@@ -41,6 +41,18 @@
     [super viewDidLoad];
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     [[self controleTeclado]setDelegate:self];
+
+#pragma Google Analytics
+    self.screenName = @"Cadastrando";
+    
+#pragma inicialiando labels
+    [_btnRegistrarOutlet setTitle:@"registrar" forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
+    _txtPrimeiroNome.placeholder = @"primeiro nome";
+    _txtUltimoNome.placeholder = @"último nome";
+    _txtEmail.placeholder = @"e-mail";
+    _txtPassword.placeholder = @"senha";
+    _txtPassword2.placeholder = @"repita a senha";
 }
 
 
@@ -83,8 +95,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/adduser";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"adduser";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];

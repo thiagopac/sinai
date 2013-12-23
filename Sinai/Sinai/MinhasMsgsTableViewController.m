@@ -50,7 +50,7 @@
     
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost/sinai/webservice/msgs/iduser/%d",[def integerForKey:@"iduser"]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@msgs/iduser/%d",API,[def integerForKey:@"iduser"]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
                                                                         responseDescriptors:@[responseDescriptor]];

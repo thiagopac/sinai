@@ -42,6 +42,32 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
+
+#pragma inicializando labels
+    [_btnEnviarOutlet setTitle:@"confirmar" forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
+    _txtEmail.placeholder = @"e-mail";
+    _txtNovaSenha.placeholder = @"nova senha";
+    _txtSenhaAtual.placeholder = @"senha atual";
+}
+
+-(void)verificar{
+    if(![_txtEmail.text isEqualToString:@""]){
+        if(![_txtSenhaAtual.text isEqualToString:@""]){
+            if([_txtNovaSenha.text length] > 5){
+               [self editar];
+            }else{
+               [self alert:@"A nova senha deve ter no mínimo 6 caracteres" :@"Erro"];
+               [SVProgressHUD dismiss];
+            }
+        }else{
+            [self alert:@"O campo Senha Atual está em branco" :@"Erro"];
+            [SVProgressHUD dismiss];
+        }
+    }else{
+        [self alert:@"O campo E-mail está em branco" :@"Erro"];
+        [SVProgressHUD dismiss];
+    }
 }
 
 -(void)editar{
@@ -59,8 +85,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/setarnovasenha";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"setarnovasenha";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];
@@ -111,7 +137,7 @@
 
 - (IBAction)btnEnviar:(UIButton *)sender {
     [SVProgressHUD show];
-    [self editar];
+    [self verificar];
 }
 
 - (IBAction)btnCancelar:(UIButton *)sender {

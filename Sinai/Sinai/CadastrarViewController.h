@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface CadastrarViewController : UIViewController
+@interface CadastrarViewController : GAITrackedViewController
 @property (strong, nonatomic) IBOutlet UITextField *txtPrimeiroNome;
 @property (strong, nonatomic) IBOutlet UITextField *txtUltimoNome;
 @property (strong, nonatomic) IBOutlet UITextField *txtEmail;
@@ -16,5 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtPassword2;
 - (IBAction)btnRegistrar:(UIButton *)sender;
 - (IBAction)btnCancelar:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnRegistrarOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancelarOutlet;
 
 @end

@@ -14,5 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtNovaSenha;
 - (IBAction)btnEnviar:(UIButton *)sender;
 - (IBAction)btnCancelar:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnEnviarOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancelarOutlet;
 
 @end

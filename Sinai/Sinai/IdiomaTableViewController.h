@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface IdiomaTableViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UILabel *lblEnunciado;
 
 @end

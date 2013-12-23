@@ -16,5 +16,9 @@
 - (IBAction)btnCancelar:(UIButton *)sender;
 - (IBAction)btnEsqueciSenha:(UIButton *)sender;
 - (IBAction)btnNotUserYet:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnLoginOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnCancelarOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnEsqueciSenhaOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnNotUserYetOutlet;
 
 @end

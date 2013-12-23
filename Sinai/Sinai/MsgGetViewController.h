@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "GAITrackedViewController.h"
 
-@interface MsgGetViewController : UIViewController
+@interface MsgGetViewController : GAITrackedViewController
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgGet;
 - (IBAction)btnAtualizar:(UIButton *)sender;
 - (IBAction)btnOrei:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIView *containerShadow;
+@property (strong, nonatomic) IBOutlet UIButton *btnOreiOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *btnAtualizarOutlet;
 
 @end

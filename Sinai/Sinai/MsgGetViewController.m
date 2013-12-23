@@ -43,6 +43,12 @@
     dispatch_async(queue, ^{
         [self loadMsgGet];
     });
+#pragma Google Analytics
+    self.screenName = @"Lendo";
+    
+#pragma inicializar labels
+    [_btnAtualizarOutlet setTitle:@"próximo" forState:UIControlStateNormal];
+    [_btnOreiOutlet setTitle:@"orei" forState:UIControlStateNormal];
     
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
@@ -106,7 +112,7 @@
         idioma = @"PT";
     }
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost/sinai/webservice/msg/%@",idioma]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@msg/%@",API,idioma]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request
                                                                         responseDescriptors:@[responseDescriptor]];
@@ -147,8 +153,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/updateoracao";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"updateoracao";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];

@@ -43,6 +43,15 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
+    
+#pragma inicializando labels
+    [_btnLoginOutlet setTitle:@"login" forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
+    [_btnEsqueciSenhaOutlet setTitle:@"esqueci a senha" forState:UIControlStateNormal];
+    [_btnNotUserYetOutlet setTitle:@"não tenho usuário" forState:UIControlStateNormal];
+    _txtEmail.placeholder = @"e-mail";
+    _txtPassword.placeholder = @"senha";
+    
 #pragma c
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
     
@@ -63,8 +72,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/validauser";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"validauser";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];

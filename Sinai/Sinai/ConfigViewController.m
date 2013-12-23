@@ -28,11 +28,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+#pragma Google Analytics
+    self.screenName = @"Configurando";
+    
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
    
+#pragma inicializando labels
+    [_btnLoginOutlet setTitle:@"fazer login" forState:UIControlStateNormal];
+    [_btnMeusPedidos setTitle:@"meus pedidos" forState:UIControlStateNormal];
+    [_btnIdiomaOutlet setTitle:@"idioma" forState:UIControlStateNormal];
+    _lblEmail.text = @"identifique-se";
 }
 
 - (void)resetDefaults {

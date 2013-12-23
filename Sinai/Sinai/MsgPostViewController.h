@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
-@interface MsgPostViewController : UIViewController
+@interface MsgPostViewController : GAITrackedViewController
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgPost;
 @property (strong, nonatomic) IBOutlet UISlider *btnValidade;
 - (IBAction)btnIdioma:(UISegmentedControl *)sender;
 - (IBAction)btnValidade:(UISlider *)sender;
+- (IBAction)btnEnviaMsg:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblDiasValidade;
 @property (strong, nonatomic) IBOutlet UIButton *btnLogin;
 @property (strong, nonatomic) IBOutlet UIView *viewBloqueio;
 - (IBAction)btnLogin:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblIdiomaEscolhido;
+@property (strong, nonatomic) IBOutlet UIButton *btnEnviaMsgOutlet;
 
 @end

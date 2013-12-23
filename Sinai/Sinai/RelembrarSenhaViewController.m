@@ -42,6 +42,20 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
+#pragma inicializando labels
+    [_btnEnviarOutlet setTitle:@"redefinir senha" forState:UIControlStateNormal];
+    [_btnAlterarSenhaOutlet setTitle:@"alterar senha" forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
+    _txtEmail.placeholder = @"e-mail";
+}
+
+-(void)verificar{
+    if(![_txtEmail.text isEqualToString:@""]){
+      [self redefinir];
+    }else{
+      [self alert:@"O campo de e-mail está vazio" :@"Erro"];
+      [SVProgressHUD dismiss];
+    }
 }
 
 -(void)redefinir{
@@ -59,8 +73,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/relembrarsenha";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"relembrarsenha";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];
@@ -110,7 +124,7 @@
 
 - (IBAction)btnEnviar:(UIButton *)sender {
     [SVProgressHUD show];
-    [self redefinir];
+    [self verificar];
 }
 
 - (IBAction)btnCancelar:(UIButton *)sender {

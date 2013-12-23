@@ -45,6 +45,9 @@
     
     arrayIdiomas = [[NSArray alloc]initWithObjects:portugues,english,espanol, nil];
 
+#pragma inicializando labels
+    _lblEnunciado.text = @"Escolha o idioma dos pedidos que serão carregados";
+    
 #pragma navigationbar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];

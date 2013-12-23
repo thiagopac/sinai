@@ -66,6 +66,14 @@
     
     [[self controleTeclado]setDelegate:self];
 
+#pragma Google Analytics
+    self.screenName = @"Escrevendo";
+    
+    
+#pragma inicializando labels
+    [_btnEnviaMsgOutlet setTitle:@"enviar" forState:UIControlStateNormal];
+    [_btnLogin setTitle:@"fazer login" forState:UIControlStateNormal];
+    
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
     
@@ -102,8 +110,8 @@
                                                                                        pathPattern:nil
                                                                                            keyPath:nil
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/"];
-    NSString  *path= @"sinai/webservice/addoracao";
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= @"addoracao";
     
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
     [objectManager addRequestDescriptor:requestDescriptor];
