@@ -44,11 +44,11 @@
     [[self controleTeclado]setDelegate:self];
 
 #pragma inicializando labels
-    [_btnEnviarOutlet setTitle:@"confirmar" forState:UIControlStateNormal];
-    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
-    _txtEmail.placeholder = @"e-mail";
-    _txtNovaSenha.placeholder = @"nova senha";
-    _txtSenhaAtual.placeholder = @"senha atual";
+    [_btnEnviarOutlet setTitle:NSLocalizedString(@"confirmar",nil) forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:NSLocalizedString(@"voltar",nil) forState:UIControlStateNormal];
+    _txtEmail.placeholder = NSLocalizedString(@"e-mail",nil);
+    _txtNovaSenha.placeholder = NSLocalizedString(@"nova senha",nil);
+    _txtSenhaAtual.placeholder = NSLocalizedString(@"senha atual",nil);
 }
 
 -(void)verificar{
@@ -57,15 +57,15 @@
             if([_txtNovaSenha.text length] > 5){
                [self editar];
             }else{
-               [self alert:@"A nova senha deve ter no mínimo 6 caracteres" :@"Erro"];
+               [self alert:NSLocalizedString(@"A nova senha deve ter no mínimo 6 caracteres",nil) :NSLocalizedString(@"Erro",nil)];
                [SVProgressHUD dismiss];
             }
         }else{
-            [self alert:@"O campo Senha Atual está em branco" :@"Erro"];
+            [self alert:NSLocalizedString(@"O campo Senha Atual está em branco",nil) :NSLocalizedString(@"Erro",nil)];
             [SVProgressHUD dismiss];
         }
     }else{
-        [self alert:@"O campo E-mail está em branco" :@"Erro"];
+        [self alert:NSLocalizedString(@"O campo E-mail está em branco",nil) :NSLocalizedString(@"Erro",nil)];
         [SVProgressHUD dismiss];
     }
 }
@@ -107,18 +107,18 @@
                          if(mappingResult != nil){
                              Output *resposta = [mappingResult firstObject];
                              NSLog(@"output : %@",resposta.output);
-                             [self alert:@"Sua senha foi alterada com êxito!" :@"Sucesso"];
+                             [self alert:NSLocalizedString(@"Sua senha foi alterada com êxito!",nil) :NSLocalizedString(@"Sucesso",nil)];
                              [SVProgressHUD dismiss];
                          }else{
                              [SVProgressHUD dismiss];
-                             [self alert:@"Ocorreu um erro! Verifique os dados preenchidos." :@"Erro"];
+                             [self alert:NSLocalizedString(@"Ocorreu um erro! Verifique os dados preenchidos.",nil) :NSLocalizedString(@"Erro",nil)];
                              [self.view endEditing:YES];
                          }
                          
                      }
                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
                          NSLog(@"Error: %@", error);
-                         [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                      }];
 }
 

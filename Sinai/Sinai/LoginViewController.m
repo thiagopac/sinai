@@ -46,11 +46,11 @@
     
 #pragma inicializando labels
     [_btnLoginOutlet setTitle:@"login" forState:UIControlStateNormal];
-    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
-    [_btnEsqueciSenhaOutlet setTitle:@"esqueci a senha" forState:UIControlStateNormal];
-    [_btnNotUserYetOutlet setTitle:@"não tenho usuário" forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:NSLocalizedString(@"voltar",nil) forState:UIControlStateNormal];
+    [_btnEsqueciSenhaOutlet setTitle:NSLocalizedString(@"esqueci a senha",nil) forState:UIControlStateNormal];
+    [_btnNotUserYetOutlet setTitle:NSLocalizedString(@"não tenho usuário",nil) forState:UIControlStateNormal];
     _txtEmail.placeholder = @"e-mail";
-    _txtPassword.placeholder = @"senha";
+    _txtPassword.placeholder = NSLocalizedString(@"senha",nil);
     
 #pragma c
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
@@ -102,14 +102,14 @@
                               [self dismissViewControllerAnimated:YES completion:nil];
                           }else{
                               [SVProgressHUD dismiss];
-                              [self alert:@"E-mail e/ou senha incorretos" :@"Erro"];
+                              [self alert:NSLocalizedString(@"E-mail e/ou senha incorretos",nil) :NSLocalizedString(@"Erro",nil)];
                               [self.view endEditing:YES];
                           }
                           
                       }
                       failure:^(RKObjectRequestOperation *operation, NSError *error) {
                           NSLog(@"Error: %@", error);
-                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                          [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                       }];
     
     

@@ -1,0 +1,100 @@
+/* Localizable.strings
+  Sinai
+
+  Created by Thiago Castro on 26/12/13.
+  Copyright (c) 2013 Thiago Castro. All rights reserved. */
+
+"orei" = "pregato";
+
+"próximo" = "prossimo";
+
+"A nova senha deve ter no mínimo 6 caracteres" = "La nuova password deve essere di almeno 6 caratteri";
+
+"Erro" = "Errore";
+
+"Ocorreu um erro" = "Richiesta non riuscita";
+
+"Digite seu pedido..." = "Scrivi la tua richiesta di preghiera...";
+
+"enviar" = "inviare";
+
+"fazer login" = "entra";
+
+"Enviado com sucesso!" = "Inviata con successo!";
+
+"dias" = "giorni";
+
+"dia" = "giorno";
+
+"Limite de 140 caracteres" = "Limite di 140 caratteri";
+
+"voltar" = "ritorno";
+
+"esqueci a senha" = "dimenticato la password";
+
+"não tenho usuário" = "inscrever-se";
+
+"senha" = "password";
+
+"E-mail e/ou senha incorretos" = "E-mail e / o password errati";
+
+"meus pedidos" = "mie richieste";
+
+"idioma" = "linguaggio";
+
+"identifique-se" = "non identificato";
+
+"registrar" = "registro";
+
+"primeiro nome" = "nome";
+
+"último nome" = "cognome";
+
+"repita a senha" = "ripetere la password";
+
+"Os campos com senha devem ser idênticos" = "Campi di password devono essere identiche";
+
+"A senha deve ter no mínimo 6 caracteres" = "La password deve essere di almeno 6 caratteri";
+
+"O campo Último Nome está em branco" = "Il campo Cognome è vuoto";
+
+"O campo Primeiro Nome está em branco" = "Il campo Nome è vuoto";
+
+"Este e-mail já está cadastrado" = "Questa email è già registrato";
+
+"Cadastrado com sucesso!" = "Registrato con successo!";
+
+"Tente novamente mais tarde" = "Riprovare più tardi";
+
+"Ativo" = "Ativo";
+
+"Inativo" = "Inattivo";
+
+"Escolha o idioma dos pedidos que serão carregados" = "Scegliere la lingua delle richieste di preghiera que sarà caricato";
+
+"redefinir senha" = "reimpostare la password";
+
+"alterar senha" = "cambiare la password";
+
+"Sua senha foi redefinida. Verifique seu e-mail." = "La tua password è stata reimpostata. Controlla la tua email.";
+
+"Alerta" = "Alert";
+
+"E-mail não cadastrado!" = "Email non registrata!";
+
+"confirmar" = "convalidare";
+
+"nova senha" = "nuova password";
+
+"senha atual" = "password corrente";
+
+"O campo Senha Atual está em branco" = "Il campo Password corrente è vuoto";
+
+"O campo E-mail está em branco" = "Il campo email è vuoto";
+
+"Sua senha foi alterada com êxito!" = "La tua password è stata cambiata con successo!";
+
+"Sucesso" = "Successo";
+
+"Ocorreu um erro! Verifique os dados preenchidos." = "Errore en la Solicitud. Controllare i dati completati.";
+

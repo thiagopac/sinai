@@ -43,17 +43,17 @@
     
     [[self controleTeclado]setDelegate:self];
 #pragma inicializando labels
-    [_btnEnviarOutlet setTitle:@"redefinir senha" forState:UIControlStateNormal];
-    [_btnAlterarSenhaOutlet setTitle:@"alterar senha" forState:UIControlStateNormal];
-    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
-    _txtEmail.placeholder = @"e-mail";
+    [_btnEnviarOutlet setTitle:NSLocalizedString(@"redefinir senha",nil) forState:UIControlStateNormal];
+    [_btnAlterarSenhaOutlet setTitle:NSLocalizedString(@"alterar senha",nil) forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:NSLocalizedString(@"voltar",nil) forState:UIControlStateNormal];
+    _txtEmail.placeholder = NSLocalizedString(@"e-mail",nil);
 }
 
 -(void)verificar{
     if(![_txtEmail.text isEqualToString:@""]){
       [self redefinir];
     }else{
-      [self alert:@"O campo de e-mail está vazio" :@"Erro"];
+      [self alert:NSLocalizedString(@"O campo de e-mail está vazio",nil) :NSLocalizedString(@"Erro",nil)];
       [SVProgressHUD dismiss];
     }
 }
@@ -94,18 +94,18 @@
                           if(mappingResult != nil){
                               Output *resposta = [mappingResult firstObject];
                               NSLog(@"output : %@",resposta.output);
-                              [self alert:@"Sua senha foi redefinida. Verifique seu e-mail." :@"Alerta"];
+                              [self alert:NSLocalizedString(@"Sua senha foi redefinida. Verifique seu e-mail.",nil) :NSLocalizedString(@"Alerta",nil)];
                               [SVProgressHUD dismiss];
                           }else{
                               [SVProgressHUD dismiss];
-                              [self alert:@"E-mail não cadastrado!" :@"Erro"];
+                              [self alert:NSLocalizedString(@"E-mail não cadastrado!",nil) :NSLocalizedString(@"Erro",nil)];
                               [self.view endEditing:YES];
                           }
                           
                       }
                       failure:^(RKObjectRequestOperation *operation, NSError *error) {
                           NSLog(@"Error: %@", error);
-                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                          [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                       }];
 }
 

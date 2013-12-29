@@ -46,13 +46,13 @@
     self.screenName = @"Cadastrando";
     
 #pragma inicialiando labels
-    [_btnRegistrarOutlet setTitle:@"registrar" forState:UIControlStateNormal];
-    [_btnCancelarOutlet setTitle:@"voltar" forState:UIControlStateNormal];
-    _txtPrimeiroNome.placeholder = @"primeiro nome";
-    _txtUltimoNome.placeholder = @"último nome";
+    [_btnRegistrarOutlet setTitle:NSLocalizedString(@"registrar",nil) forState:UIControlStateNormal];
+    [_btnCancelarOutlet setTitle:NSLocalizedString(@"voltar",nil) forState:UIControlStateNormal];
+    _txtPrimeiroNome.placeholder = NSLocalizedString(@"primeiro nome",nil);
+    _txtUltimoNome.placeholder = NSLocalizedString(@"último nome",nil);
     _txtEmail.placeholder = @"e-mail";
-    _txtPassword.placeholder = @"senha";
-    _txtPassword2.placeholder = @"repita a senha";
+    _txtPassword.placeholder = NSLocalizedString(@"senha",nil);
+    _txtPassword2.placeholder = NSLocalizedString(@"repita a senha",nil);
 }
 
 
@@ -63,19 +63,19 @@
                 if ([_txtPassword.text isEqualToString:[_txtPassword2 text]]) {
                     [self registrar];
                 }else{
-                    [self alert:@"Os campos com senha devem ser idênticos" :@"Erro"];
+                    [self alert:NSLocalizedString(@"Os campos com senha devem ser idênticos",nil) :NSLocalizedString(@"Erro",nil)];
                     [SVProgressHUD dismiss];
                 }
             }else{
-                [self alert:@"A senha deve ter no mínimo 6 caracteres" :@"Erro"];
+                [self alert:NSLocalizedString(@"A senha deve ter no mínimo 6 caracteres",nil) :NSLocalizedString(@"Erro",nil)];
                 [SVProgressHUD dismiss];
             }
         }else{
-            [self alert:@"O campo Último Nome está em branco" :@"Erro"];
+            [self alert:NSLocalizedString(@"O campo Último Nome está em branco",nil) :NSLocalizedString(@"Erro",nil)];
             [SVProgressHUD dismiss];
         }
      }else{
-         [self alert:@"O campo Primeiro Nome está em branco" :@"Erro"];
+         [self alert:NSLocalizedString(@"O campo Primeiro Nome está em branco",nil) :NSLocalizedString(@"Erro",nil)];
          [SVProgressHUD dismiss];
     }
 }
@@ -121,10 +121,10 @@
                               NSLog(@"erro : %@",userLogged.erro);
                               if (userLogged.erro != nil) {
                                   [SVProgressHUD dismiss];
-                                  [self alert:@"Este e-mail já está cadastrado" :@"Erro"];
+                                  [self alert:NSLocalizedString(@"Este e-mail já está cadastrado",nil) :NSLocalizedString(@"Erro",nil)];
                               }else{
                                   [SVProgressHUD dismiss];
-                                  [SVProgressHUD showSuccessWithStatus:@"Cadastrado com sucesso!"];
+                                  [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Cadastrado com sucesso!",nil)];
                                   [NSTimer scheduledTimerWithTimeInterval:3 target:self
                                                                  selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
                                   
@@ -133,14 +133,14 @@
                               
                           }else{
                               [SVProgressHUD dismiss];
-                              [self alert:@"Tente novamente mais tarde" :@"Erro"];
+                              [self alert:NSLocalizedString(@"Tente novamente mais tarde",nil) :NSLocalizedString(@"Erro",nil)];
                               [self.view endEditing:YES];
                           }
                           
                       }
                       failure:^(RKObjectRequestOperation *operation, NSError *error) {
                           NSLog(@"Error: %@", error);
-                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                          [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                       }];
     
     

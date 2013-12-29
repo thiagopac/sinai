@@ -1,0 +1,100 @@
+/* Localizable.strings
+  Sinai
+
+  Created by Thiago Castro on 26/12/13.
+  Copyright (c) 2013 Thiago Castro. All rights reserved. */
+
+"orei" = "orado";
+
+"próximo" = "siguiente";
+
+"A nova senha deve ter no mínimo 6 caracteres" = "La nueva contraseña debe tener como mínimo 6 caracteres";
+
+"Erro" = "Error";
+
+"Ocorreu um erro" = "Error en la solicitud";
+
+"Digite seu pedido..." = "Escriba su petición de oración...";
+
+"enviar" = "enviar";
+
+"fazer login" = "iniciar sesión";
+
+"Enviado com sucesso!" = "Enviado con éxito!";
+
+"dias" = "días";
+
+"dia" = "día";
+
+"Limite de 140 caracteres" = "Límite de 140 caracteres";
+
+"voltar" = "volver";
+
+"esqueci a senha" = "olvidé mi contraseña";
+
+"não tenho usuário" = "nuevo usuario";
+
+"senha" = "contraseña";
+
+"E-mail e/ou senha incorretos" = "E-mail y/o contraseña incorrectos";
+
+"meus pedidos" = "mis peticiones";
+
+"idioma" = "idioma";
+
+"identifique-se" = "no identificado";
+
+"registrar" = "registrar";
+
+"primeiro nome" = "nombre";
+
+"último nome" = "apellido";
+
+"repita a senha" = "repetir la contraseña";
+
+"Os campos com senha devem ser idênticos" = "Los campos de contraseña tienen que ser idénticos";
+
+"A senha deve ter no mínimo 6 caracteres" = "La contraseña debe tener como mínimo 6 caracteres";
+
+"O campo Último Nome está em branco" = "El campo Apellido está en blanco";
+
+"O campo Primeiro Nome está em branco" = "El campo de Nombre está en blanco";
+
+"Este e-mail já está cadastrado" = "Este correo electrónico ya está registrado";
+
+"Cadastrado com sucesso!" = "Registrado con éxito!";
+
+"Tente novamente mais tarde" = "Inténtelo de nuevo más tarde";
+
+"Ativo" = "Activo";
+
+"Inativo" = "Inactivo";
+
+"Escolha o idioma dos pedidos que serão carregados" = "Elija el idioma de las peticiones que se cargarán";
+
+"redefinir senha" = "restablecer contraseña";
+
+"alterar senha" = "cambiar contraseña";
+
+"Sua senha foi redefinida. Verifique seu e-mail." = "Su contraseña se ha restablecido. Revise su correo electrónico.";
+
+"Alerta" = "Alerta";
+
+"E-mail não cadastrado!" = "Correo electrónico no registrado!";
+
+"confirmar" = "confirmar";
+
+"nova senha" = "nueva contraseña";
+
+"senha atual" = "contraseña actual";
+
+"O campo Senha Atual está em branco" = "El campo Contraseña actual está en blanco";
+
+"O campo E-mail está em branco" = "El campo de correo electrónico está en blanco";
+
+"Sua senha foi alterada com êxito!" = "Su contraseña ha sido cambiada con éxito!";
+
+"Sucesso" = "Éxito";
+
+"Ocorreu um erro! Verifique os dados preenchidos." = "Error en la solicitud. Verifique os dados preenchidos.";
+

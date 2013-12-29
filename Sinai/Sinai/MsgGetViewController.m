@@ -47,8 +47,8 @@
     self.screenName = @"Lendo";
     
 #pragma inicializar labels
-    [_btnAtualizarOutlet setTitle:@"próximo" forState:UIControlStateNormal];
-    [_btnOreiOutlet setTitle:@"orei" forState:UIControlStateNormal];
+    [_btnAtualizarOutlet setTitle:NSLocalizedString(@"próximo", nil) forState:UIControlStateNormal];
+    [_btnOreiOutlet setTitle:NSLocalizedString(@"orei",nil) forState:UIControlStateNormal];
     
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
@@ -132,7 +132,7 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error);
         NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
-        [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
     }];
     
     [operation start];
@@ -182,7 +182,7 @@
                       }
                       failure:^(RKObjectRequestOperation *operation, NSError *error) {
                           NSLog(@"Error: %@", error);
-                          [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                          [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                       }];
 }
 

@@ -62,7 +62,7 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error);
         NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
-        [SVProgressHUD showErrorWithStatus:@"Request failed"];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
     }];
     
     [operation start];
@@ -125,11 +125,11 @@
     NSComparisonResult result = [hoje compare:dataValidade];
     
     if(result == NSOrderedAscending)
-        cell.lblPublicacao.text = @"Ativo";
+        cell.lblPublicacao.text = NSLocalizedString(@"Ativo",nil);
     else if(result==NSOrderedDescending)
-        cell.lblPublicacao.text = @"Inativo";
+        cell.lblPublicacao.text = NSLocalizedString(@"Inativo",nil);
     else
-        cell.lblPublicacao.text = @"Ativo";
+        cell.lblPublicacao.text = NSLocalizedString(@"Ativo",nil);
     
     [[cell lblMsg] setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:12]];
 }

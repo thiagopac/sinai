@@ -1,0 +1,100 @@
+/* Localizable.strings
+  Sinai
+
+  Created by Thiago Castro on 26/12/13.
+  Copyright (c) 2013 Thiago Castro. All rights reserved. */
+
+"orei" = "orei";
+
+"próximo" = "próximo";
+
+"A nova senha deve ter no mínimo 6 caracteres" = "A nova senha deve ter no mínimo 6 caracteres";
+
+"Erro" = "Erro";
+
+"Ocorreu um erro" = "Ocorreu um erro";
+
+"Digite seu pedido..." = "Digite seu pedido...";
+
+"enviar" = "enviar";
+
+"fazer login" = "fazer login";
+
+"Enviado com sucesso!" = "Enviado com sucesso!";
+
+"dias" = "dias";
+
+"dia" = "dia";
+
+"Limite de 140 caracteres" = "Limite de 140 caracteres";
+
+"voltar" = "voltar";
+
+"esqueci a senha" = "esqueci a senha";
+
+"não tenho usuário" = "não tenho usuário";
+
+"senha" = "senha";
+
+"E-mail e/ou senha incorretos" = "E-mail e/ou senha incorretos";
+
+"meus pedidos" = "meus pedidos";
+
+"idioma" = "idioma";
+
+"identifique-se" = "identifique-se";
+
+"registrar" = "registrar";
+
+"primeiro nome" = "primeiro nome";
+
+"último nome" = "último nome";
+
+"repita a senha" = "repita a senha";
+
+"Os campos com senha devem ser idênticos" = "Os campos com senha devem ser idênticos";
+
+"A senha deve ter no mínimo 6 caracteres" = "A senha deve ter no mínimo 6 caracteres";
+
+"O campo Último Nome está em branco" = "O campo Último Nome está em branco";
+
+"O campo Primeiro Nome está em branco" = "O campo Primeiro Nome está em branco";
+
+"Este e-mail já está cadastrado" = "Este e-mail já está cadastrado";
+
+"Cadastrado com sucesso!" = "Cadastrado com sucesso!";
+
+"Tente novamente mais tarde" = "Tente novamente mais tarde";
+
+"Ativo" = "Ativo";
+
+"Inativo" = "Inativo";
+
+"Escolha o idioma dos pedidos que serão carregados" = "Escolha o idioma dos pedidos que serão carregados";
+
+"redefinir senha" = "redefinir senha";
+
+"alterar senha" = "alterar senha";
+
+"Sua senha foi redefinida. Verifique seu e-mail." = "Sua senha foi redefinida. Verifique seu e-mail.";
+
+"Alerta" = "Alerta";
+
+"E-mail não cadastrado!" = "E-mail não cadastrado!";
+
+"confirmar" = "confirmar";
+
+"nova senha" = "nova senha";
+
+"senha atual" = "senha atual";
+
+"O campo Senha Atual está em branco" = "O campo Senha Atual está em branco";
+
+"O campo E-mail está em branco" = "O campo E-mail está em branco";
+
+"Sua senha foi alterada com êxito!" = "Sua senha foi alterada com êxito!";
+
+"Sucesso" = "Sucesso";
+
+"Ocorreu um erro! Verifique os dados preenchidos." = "Ocorreu um erro! Verifique os dados preenchidos.";
+

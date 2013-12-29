@@ -38,10 +38,10 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
    
 #pragma inicializando labels
-    [_btnLoginOutlet setTitle:@"fazer login" forState:UIControlStateNormal];
-    [_btnMeusPedidos setTitle:@"meus pedidos" forState:UIControlStateNormal];
-    [_btnIdiomaOutlet setTitle:@"idioma" forState:UIControlStateNormal];
-    _lblEmail.text = @"identifique-se";
+    [_btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
+    [_btnMeusPedidos setTitle:NSLocalizedString(@"meus pedidos",nil) forState:UIControlStateNormal];
+    [_btnIdiomaOutlet setTitle:NSLocalizedString(@"idioma",nil) forState:UIControlStateNormal];
+    _lblEmail.text = NSLocalizedString(@"identifique-se",nil);
 }
 
 - (void)resetDefaults {
@@ -51,7 +51,7 @@
         [def removeObjectForKey:key];
     }
     [def synchronize];
-    [self.btnLoginOutlet setTitle:@"fazer login" forState:UIControlStateNormal];
+    [self.btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
     _btnMeusPedidos.enabled = NO;
     _btnMeusPedidos.alpha = 0.6;
     self.lblEmail.text = nil;
@@ -68,7 +68,7 @@
         _btnMeusPedidos.alpha = 1;
         self.lblEmail.text = [def objectForKey:@"email"];
     }else{
-        [self.btnLoginOutlet setTitle:@"fazer login" forState:UIControlStateNormal];
+        [self.btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
         _btnMeusPedidos.enabled = NO;
         _btnMeusPedidos.alpha = 0.6;
         self.lblEmail.text = nil;

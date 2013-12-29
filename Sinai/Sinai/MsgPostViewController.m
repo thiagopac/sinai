@@ -29,7 +29,7 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([_lblMsgPost.text isEqualToString:@"Digite seu pedido..."]) {
+    if ([_lblMsgPost.text isEqualToString:NSLocalizedString(@"Digite seu pedido...", nil)]) {
         _lblMsgPost.text = @"";
         _lblMsgPost.textColor = [UIColor grayColor];
     }
@@ -39,7 +39,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     if ([_lblMsgPost.text isEqualToString:@""]) {
-        _lblMsgPost.text = @"Digite seu pedido...";
+        _lblMsgPost.text = NSLocalizedString(@"Digite seu pedido...", nil);
         _lblMsgPost.textColor = [UIColor lightTextColor];
     }
     [_lblMsgPost resignFirstResponder];
@@ -65,14 +65,15 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
+    [[self lblDiasValidade]setText:[NSString stringWithFormat:@"10 %@",NSLocalizedString(@"dias",nil)]];
 
 #pragma Google Analytics
     self.screenName = @"Escrevendo";
     
     
 #pragma inicializando labels
-    [_btnEnviaMsgOutlet setTitle:@"enviar" forState:UIControlStateNormal];
-    [_btnLogin setTitle:@"fazer login" forState:UIControlStateNormal];
+    [_btnEnviaMsgOutlet setTitle:NSLocalizedString(@"enviar",nil) forState:UIControlStateNormal];
+    [_btnLogin setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
     
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
@@ -81,7 +82,7 @@
 
 #pragma uitextview fake placeholder
     _lblMsgPost.delegate = self;
-    _lblMsgPost.text = @"Digite seu pedido...";
+    _lblMsgPost.text = NSLocalizedString(@"Digite seu pedido...",nil);
     _lblMsgPost.textColor = [UIColor grayColor];
 }
 
@@ -135,7 +136,7 @@
                          if(mappingResult != nil){
                              MsgPost *msgRecebida = [mappingResult firstObject];
                              NSLog(@"msg : %d",msgRecebida.idmsg);
-                             [SVProgressHUD showSuccessWithStatus:@"Enviado com sucesso!"];
+                             [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Enviado com sucesso!",nil)];
                              [NSTimer scheduledTimerWithTimeInterval:3 target:self
                                                             selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
                              [self.lblMsgPost setText:@""];
@@ -147,7 +148,7 @@
                      }
                      failure:^(RKObjectRequestOperation *operation, NSError *error) {
                          NSLog(@"Error: %@", error);
-                         [SVProgressHUD showErrorWithStatus:@"Ocorreu um erro"];
+                         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
                      }];
 }
 
@@ -206,9 +207,9 @@
 
 -(void)alteraLabelDias{
     if(((int)round(sliderValidade.value))>1){
-        dias = @"dias";
+        dias = NSLocalizedString(@"dias",nil);
     }else{
-        dias = @"dia";
+        dias = NSLocalizedString(@"dia",nil);
     }
     [[self lblDiasValidade]setText:[NSString stringWithFormat:@"%d %@",(int)round(sliderValidade.value),dias]];
 }
@@ -232,7 +233,7 @@
     //if message length is equal to 15 characters display alert view
     if (substring.length == 141) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Limite de 140 caracteres" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:NSLocalizedString(@"Limite de 140 caracteres",nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         //if character count is over max number change label to red text
         lblCharCounter.textColor = [UIColor redColor];

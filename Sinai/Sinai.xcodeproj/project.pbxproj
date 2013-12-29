@@ -27,10 +27,10 @@
 		6E39C8721864F62600AD984A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E39C8701864F62600AD984A /* logo.png */; };
 		6E39C8731864F62600AD984A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E39C8711864F62600AD984A /* logo@2x.png */; };
 		6E40A4FA184C21220077F0D8 /* RelembrarSenhaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */; };
+		6E559424186C6725006F532B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E559426186C6725006F532B /* Localizable.strings */; };
 		6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */; };
 		6E5A36401839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
-		6E5A36461839B236009B7ED5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A36441839B236009B7ED5 /* InfoPlist.strings */; };
 		6E5A36481839B236009B7ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36471839B236009B7ED5 /* main.m */; };
 		6E5A364C1839B236009B7ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A364B1839B236009B7ED5 /* AppDelegate.m */; };
 		6E5A364F1839B236009B7ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A364D1839B236009B7ED5 /* Main.storyboard */; };
@@ -39,7 +39,6 @@
 		6E5A365B1839B236009B7ED5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A365A1839B236009B7ED5 /* XCTest.framework */; };
 		6E5A365C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A365D1839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
-		6E5A36651839B236009B7ED5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A36631839B236009B7ED5 /* InfoPlist.strings */; };
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
 		6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */; };
 		6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */; };
@@ -126,12 +125,18 @@
 		6E39C8711864F62600AD984A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelembrarSenhaViewController.h; sourceTree = "<group>"; };
 		6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelembrarSenhaViewController.m; sourceTree = "<group>"; };
+		6E55941D186C5D69006F532B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		6E55941F186C5D6C006F532B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		6E559421186C5D6D006F532B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		6E559425186C6725006F532B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E559427186C672B006F532B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E559428186C672C006F532B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E559429186C672D006F532B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E5A36381839B236009B7ED5 /* Sinai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sinai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A363B1839B236009B7ED5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E5A363D1839B236009B7ED5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6E5A363F1839B236009B7ED5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6E5A36431839B236009B7ED5 /* Sinai-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sinai-Info.plist"; sourceTree = "<group>"; };
-		6E5A36451839B236009B7ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E5A36471839B236009B7ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6E5A36491839B236009B7ED5 /* Sinai-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sinai-Prefix.pch"; sourceTree = "<group>"; };
 		6E5A364A1839B236009B7ED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,8 +148,9 @@
 		6E5A36591839B236009B7ED5 /* SinaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A365A1839B236009B7ED5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E5A36621839B236009B7ED5 /* SinaiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SinaiTests-Info.plist"; sourceTree = "<group>"; };
-		6E5A36641839B236009B7ED5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E5A36661839B236009B7ED5 /* SinaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaiTests.m; sourceTree = "<group>"; };
+		6E68E577186D1FAA00994E36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		6E68E578186D1FAA00994E36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
@@ -400,6 +406,7 @@
 				6E03616C1839B54400748088 /* View */,
 				6E5A364A1839B236009B7ED5 /* AppDelegate.h */,
 				6E5A364B1839B236009B7ED5 /* AppDelegate.m */,
+				6E559426186C6725006F532B /* Localizable.strings */,
 				6E5A364D1839B236009B7ED5 /* Main.storyboard */,
 				6E5A36501839B236009B7ED5 /* ViewController.h */,
 				6E5A36511839B236009B7ED5 /* ViewController.m */,
@@ -414,7 +421,6 @@
 			children = (
 				6E1354A91862182700E7F536 /* Google Analytics SDK */,
 				6E5A36431839B236009B7ED5 /* Sinai-Info.plist */,
-				6E5A36441839B236009B7ED5 /* InfoPlist.strings */,
 				6E5A36471839B236009B7ED5 /* main.m */,
 				6E5A36491839B236009B7ED5 /* Sinai-Prefix.pch */,
 			);
@@ -434,7 +440,6 @@
 			isa = PBXGroup;
 			children = (
 				6E5A36621839B236009B7ED5 /* SinaiTests-Info.plist */,
-				6E5A36631839B236009B7ED5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -535,6 +540,9 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				pt,
+				it,
 			);
 			mainGroup = 6E5A362F1839B236009B7ED5;
 			productRefGroup = 6E5A36391839B236009B7ED5 /* Products */;
@@ -583,10 +591,10 @@
 				6E39C86E1864F60E00AD984A /* pedir_tabbar.png in Resources */,
 				6EACE77618569B29004A952F /* orar.png in Resources */,
 				6EACE76D18569B29004A952F /* meuspedidos@2x.png in Resources */,
+				6E559424186C6725006F532B /* Localizable.strings in Resources */,
 				6EACE76218569B29004A952F /* esquecisenha.png in Resources */,
 				6E39C86B1864F27700AD984A /* profile_tabbar@2x.png in Resources */,
 				6E39C86F1864F60E00AD984A /* pedir_tabbar@2x.png in Resources */,
-				6E5A36461839B236009B7ED5 /* InfoPlist.strings in Resources */,
 				6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */,
 				6EACE76618569B29004A952F /* login_txt.png in Resources */,
 				6E5A364F1839B236009B7ED5 /* Main.storyboard in Resources */,
@@ -601,7 +609,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5A36651839B236009B7ED5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,28 +696,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E5A36441839B236009B7ED5 /* InfoPlist.strings */ = {
+		6E559426186C6725006F532B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6E5A36451839B236009B7ED5 /* en */,
+				6E559425186C6725006F532B /* Base */,
+				6E559427186C672B006F532B /* pt */,
+				6E559428186C672C006F532B /* en */,
+				6E559429186C672D006F532B /* es */,
+				6E68E578186D1FAA00994E36 /* it */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		6E5A364D1839B236009B7ED5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6E5A364E1839B236009B7ED5 /* Base */,
+				6E55941D186C5D69006F532B /* pt */,
+				6E55941F186C5D6C006F532B /* en */,
+				6E559421186C5D6D006F532B /* es */,
+				6E68E577186D1FAA00994E36 /* it */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6E5A36631839B236009B7ED5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E5A36641839B236009B7ED5 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

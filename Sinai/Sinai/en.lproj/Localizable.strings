@@ -1,0 +1,100 @@
+/* Localizable.strings
+  Sinai
+
+  Created by Thiago Castro on 26/12/13.
+  Copyright (c) 2013 Thiago Castro. All rights reserved. */
+
+"orei" = "prayed";
+
+"próximo" = "next";
+
+"A nova senha deve ter no mínimo 6 caracteres" = "New password must be at least 6 characters";
+
+"Erro" = "Error";
+
+"Ocorreu um erro" = "Failed request";
+
+"Digite seu pedido..." = "Enter your prayer request...";
+
+"enviar" = "send";
+
+"fazer login" = "sign in";
+
+"Enviado com sucesso!" = "Successfully sent!";
+
+"dias" = "days";
+
+"dia" = "day";
+
+"Limite de 140 caracteres" = "Limit of 140 characters";
+
+"voltar" = "back";
+
+"esqueci a senha" = "forgot the password";
+
+"não tenho usuário" = "sign up";
+
+"senha" = "password";
+
+"E-mail e/ou senha incorretos" = "Wrong e-mail and/or password";
+
+"meus pedidos" = "my requests";
+
+"idioma" = "language";
+
+"identifique-se" = "unidentified";
+
+"registrar" = "register";
+
+"primeiro nome" = "first name";
+
+"último nome" = "last name";
+
+"repita a senha" = "repeat the password";
+
+"Os campos com senha devem ser idênticos" = "The password fields must be identical";
+
+"A senha deve ter no mínimo 6 caracteres" = "Password must be at least 6 characters";
+
+"O campo Último Nome está em branco" = "The field Last Name is empty";
+
+"O campo Primeiro Nome está em branco" = "The field First Name is empty";
+
+"Este e-mail já está cadastrado" = "This email is already registered";
+
+"Cadastrado com sucesso!" = "Successfully registered!";
+
+"Tente novamente mais tarde" = "Try again later";
+
+"Ativo" = "Active";
+
+"Inativo" = "Inactive";
+
+"Escolha o idioma dos pedidos que serão carregados" = "Choose the language of the requests that will be loaded";
+
+"redefinir senha" = "reset password";
+
+"alterar senha" = "change password";
+
+"Sua senha foi redefinida. Verifique seu e-mail." = "Your password has been reset. Check your email.";
+
+"Alerta" = "Alert";
+
+"E-mail não cadastrado!" = "E-mail not registered!";
+
+"confirmar" = "confirm";
+
+"nova senha" = "new password";
+
+"senha atual" = "current password";
+
+"O campo Senha Atual está em branco" = "The field Current Password is empty";
+
+"O campo E-mail está em branco" = "The field E-mail is empty";
+
+"Sua senha foi alterada com êxito!" = "Your password has been changed successfully!";
+
+"Sucesso" = "Success";
+
+"Ocorreu um erro! Verifique os dados preenchidos." = "An error has occurred! Check the filled data.";
+

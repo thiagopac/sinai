@@ -1,0 +1,129 @@
+/* Class = "IBUILabel"; text = "Inativo"; ObjectID = "1UI-Yj-NA4"; */
+"1UI-Yj-NA4.text" = "Inativo";
+
+/* Class = "IBUITextField"; placeholder = "último nome"; ObjectID = "3r1-Ya-IpW"; */
+"3r1-Ya-IpW.placeholder" = "último nome";
+
+/* Class = "IBUIButton"; normalTitle = "esqueci a senha"; ObjectID = "3rV-go-6O9"; */
+"3rV-go-6O9.normalTitle" = "esqueci a senha";
+
+/* Class = "IBUIButton"; normalTitle = "meus pedidos"; ObjectID = "4GF-As-QgY"; */
+"4GF-As-QgY.normalTitle" = "meus pedidos";
+
+/* Class = "IBUIButton"; normalTitle = "alterar senha"; ObjectID = "4P5-g2-vdD"; */
+"4P5-g2-vdD.normalTitle" = "alterar senha";
+
+/* Class = "IBUIButton"; normalTitle = "orei"; ObjectID = "54q-1Z-B1V"; */
+"54q-1Z-B1V.normalTitle" = "orei";
+
+/* Class = "IBUITextField"; placeholder = "e-mail"; ObjectID = "8Nc-A4-akf"; */
+"8Nc-A4-akf.placeholder" = "e-mail";
+
+/* Class = "IBUILabel"; text = "10 dias"; ObjectID = "99T-Rt-bey"; */
+"99T-Rt-bey.text" = "10 dias";
+
+/* Class = "IBUIButton"; normalTitle = "voltar"; ObjectID = "9qp-JF-DVk"; */
+"9qp-JF-DVk.normalTitle" = "voltar";
+
+/* Class = "IBUITextView"; text = "Este é um pedido com contagem de caracteres, que irá me ajudar a ter noção do tamanho do texto que poderá ir no campo de oração, um tweet."; ObjectID = "Ac2-9o-wwy"; */
+"Ac2-9o-wwy.text" = "Este é um pedido com contagem de caracteres, que irá me ajudar a ter noção do tamanho do texto que poderá ir no campo de oração, um tweet.";
+
+/* Class = "IBUILabel"; text = "30"; ObjectID = "Cad-IM-6ew"; */
+"Cad-IM-6ew.text" = "30";
+
+/* Class = "IBUIButton"; normalTitle = "fazer login"; ObjectID = "EgS-gj-48m"; */
+"EgS-gj-48m.normalTitle" = "fazer login";
+
+/* Class = "IBUILabel"; text = "identifique-se"; ObjectID = "Fwk-jL-GH7"; */
+"Fwk-jL-GH7.text" = "identifique-se";
+
+/* Class = "IBUITextField"; placeholder = "e-mail"; ObjectID = "JXK-jx-Crr"; */
+"JXK-jx-Crr.placeholder" = "e-mail";
+
+/* Class = "IBUILabel"; text = "Escolha o idioma dos pedidos que serão carregados"; ObjectID = "M5n-uW-HFe"; */
+"M5n-uW-HFe.text" = "Escolha o idioma dos pedidos que serão carregados";
+
+/* Class = "IBUIButton"; normalTitle = "voltar"; ObjectID = "MWC-Q9-P6i"; */
+"MWC-Q9-P6i.normalTitle" = "voltar";
+
+/* Class = "IBUITextField"; placeholder = "senha"; ObjectID = "Sbb-cq-2TA"; */
+"Sbb-cq-2TA.placeholder" = "senha";
+
+/* Class = "IBUIButton"; normalTitle = "idioma"; ObjectID = "TPT-D0-gF1"; */
+"TPT-D0-gF1.normalTitle" = "idioma";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "VKO-eK-TWP"; */
+"VKO-eK-TWP.text" = "0";
+
+/* Class = "IBUIButton"; normalTitle = "voltar"; ObjectID = "VTQ-DW-zDb"; */
+"VTQ-DW-zDb.normalTitle" = "voltar";
+
+/* Class = "IBUITextField"; placeholder = "nova senha"; ObjectID = "X3t-3e-8WH"; */
+"X3t-3e-8WH.placeholder" = "nova senha";
+
+/* Class = "IBUILabel"; text = "dd/mm/aaaa"; ObjectID = "YPv-Zd-GyF"; */
+"YPv-Zd-GyF.text" = "dd/mm/aaaa";
+
+/* Class = "IBUIButton"; normalTitle = "login"; ObjectID = "aLa-aL-hE7"; */
+"aLa-aL-hE7.normalTitle" = "login";
+
+/* Class = "IBUIButton"; normalTitle = "fazer login"; ObjectID = "cY4-Yf-sB5"; */
+"cY4-Yf-sB5.normalTitle" = "fazer login";
+
+/* Class = "IBUIButton"; normalTitle = "registrar"; ObjectID = "cg2-iy-xqC"; */
+"cg2-iy-xqC.normalTitle" = "registrar";
+
+/* Class = "IBUILabel"; text = "1"; ObjectID = "cyv-Pe-W2e"; */
+"cyv-Pe-W2e.text" = "1";
+
+/* Class = "IBUIButton"; normalTitle = "voltar"; ObjectID = "dsr-rW-Kjs"; */
+"dsr-rW-Kjs.normalTitle" = "voltar";
+
+/* Class = "IBUISegmentedControl"; fgZ-5g-6a9.segmentTitles[0] = "Português"; ObjectID = "fgZ-5g-6a9"; */
+"fgZ-5g-6a9.segmentTitles[0]" = "Português";
+
+/* Class = "IBUISegmentedControl"; fgZ-5g-6a9.segmentTitles[1] = "English"; ObjectID = "fgZ-5g-6a9"; */
+"fgZ-5g-6a9.segmentTitles[1]" = "English";
+
+/* Class = "IBUISegmentedControl"; fgZ-5g-6a9.segmentTitles[2] = "Español"; ObjectID = "fgZ-5g-6a9"; */
+"fgZ-5g-6a9.segmentTitles[2]" = "Español";
+
+/* Class = "IBUIButton"; normalTitle = "não tenho usuário"; ObjectID = "gRz-4r-HfK"; */
+"gRz-4r-HfK.normalTitle" = "não tenho usuário";
+
+/* Class = "IBUIButton"; normalTitle = "redefinir senha"; ObjectID = "h4C-wb-Jya"; */
+"h4C-wb-Jya.normalTitle" = "redefinir senha";
+
+/* Class = "IBUITextField"; placeholder = "e-mail"; ObjectID = "hRk-Dx-FVg"; */
+"hRk-Dx-FVg.placeholder" = "e-mail";
+
+/* Class = "IBUITextField"; placeholder = "repita a senha"; ObjectID = "iUg-w2-91Y"; */
+"iUg-w2-91Y.placeholder" = "repita a senha";
+
+/* Class = "IBUITextField"; placeholder = "primeiro nome"; ObjectID = "n7v-cY-kC5"; */
+"n7v-cY-kC5.placeholder" = "primeiro nome";
+
+/* Class = "IBUITextField"; placeholder = "senha"; ObjectID = "nc7-ij-lvB"; */
+"nc7-ij-lvB.placeholder" = "senha";
+
+/* Class = "IBUILabel"; text = "Português"; ObjectID = "stV-zH-z5E"; */
+"stV-zH-z5E.text" = "Português";
+
+/* Class = "IBUIButton"; normalTitle = "confirmar"; ObjectID = "swv-We-Z9f"; */
+"swv-We-Z9f.normalTitle" = "confirmar";
+
+/* Class = "IBUIButton"; normalTitle = "enviar"; ObjectID = "uSp-AN-8Aa"; */
+"uSp-AN-8Aa.normalTitle" = "enviar";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "ugH-Xr-Arq"; */
+"ugH-Xr-Arq.text" = "0";
+
+/* Class = "IBUITextField"; placeholder = "senha atual"; ObjectID = "w3s-JZ-tTC"; */
+"w3s-JZ-tTC.placeholder" = "senha atual";
+
+/* Class = "IBUITextField"; placeholder = " e-mail"; ObjectID = "wbz-bC-GDW"; */
+"wbz-bC-GDW.placeholder" = " e-mail";
+
+/* Class = "IBUIButton"; normalTitle = "próximo"; ObjectID = "z6d-4r-7T7"; */
+"z6d-4r-7T7.normalTitle" = "próximo";
+
