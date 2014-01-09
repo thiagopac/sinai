@@ -25,7 +25,12 @@
 @property (nonatomic, copy, readwrite) NSString *destinationKeyPath;
 @end
 
+
+
 @implementation RKAttributeMapping
+
+@synthesize sourceKeyPath = _sourceKeyPath;
+@synthesize destinationKeyPath = _destinationKeyPath;
 
 + (instancetype)attributeMappingFromKeyPath:(NSString *)sourceKeyPath toKeyPath:(NSString *)destinationKeyPath
 {
