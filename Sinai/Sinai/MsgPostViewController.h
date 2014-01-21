@@ -8,18 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "GAITrackedViewController.h"
+#import "ActionSheetPicker.h"
 
-@interface MsgPostViewController : GAITrackedViewController
+@class AbstractActionSheetPicker;
+
+@interface MsgPostViewController : GAITrackedViewController <UITextFieldDelegate>
+
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgPost;
-@property (strong, nonatomic) IBOutlet UISlider *btnValidade;
-- (IBAction)btnIdioma:(UISegmentedControl *)sender;
-- (IBAction)btnValidade:(UISlider *)sender;
-- (IBAction)btnEnviaMsg:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UILabel *lblDiasValidade;
 @property (strong, nonatomic) IBOutlet UIButton *btnLogin;
 @property (strong, nonatomic) IBOutlet UIView *viewBloqueio;
-- (IBAction)btnLogin:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UILabel *lblIdiomaEscolhido;
 @property (strong, nonatomic) IBOutlet UIButton *btnEnviaMsgOutlet;
+@property (strong, nonatomic) IBOutlet UITextField *txtIdiomaOutlet;
+@property (strong, nonatomic) IBOutlet UITextField *txtValidadeOutlet;
+@property (nonatomic, strong) AbstractActionSheetPicker *actionSheetPicker;
+
+- (IBAction)btnEnviaMsg:(UIButton *)sender;
+- (IBAction)btnLogin:(UIButton *)sender;
+- (IBAction)txtIdioma:(UITextField *)sender;
+- (IBAction)txtValidade:(UITextField *)sender;
 
 @end

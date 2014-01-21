@@ -13,14 +13,12 @@
 #import <SVProgressHUD.h>
 #import "ControleTeclado.h"
 #import "LoginViewController.h"
+#import "ActionSheetPicker.h"
 
 @interface MsgPostViewController ()<ControleTecladoDelegate, UITextViewDelegate>{
-    int valorValidade;
-    IBOutlet UISegmentedControl *opcoesIdioma;
+    NSString *valorValidade;
     IBOutlet UILabel *lblCharCounter;
-    IBOutlet UISlider *sliderValidade;
     NSString *stringIdioma;
-    NSString *dias;
 }
 @property (nonatomic, strong) ControleTeclado *controleTeclado;
 @end
@@ -65,8 +63,7 @@
     [self setControleTeclado:[[ControleTeclado alloc] init]];
     
     [[self controleTeclado]setDelegate:self];
-    [[self lblDiasValidade]setText:[NSString stringWithFormat:@"10 %@",NSLocalizedString(@"dias",nil)]];
-
+    
 #pragma Google Analytics
     self.screenName = @"Escrevendo";
     
@@ -74,6 +71,8 @@
 #pragma inicializando labels
     [_btnEnviaMsgOutlet setTitle:NSLocalizedString(@"enviar",nil) forState:UIControlStateNormal];
     [_btnLogin setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
+    _txtIdiomaOutlet.placeholder = NSLocalizedString(@"Selecione o idioma",nil);
+    _txtValidadeOutlet.placeholder = NSLocalizedString(@"Selecione a validade (em dias)",nil);
     
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
@@ -85,6 +84,7 @@
     _lblMsgPost.text = NSLocalizedString(@"Digite seu pedido...",nil);
     _lblMsgPost.textColor = [UIColor grayColor];
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
@@ -125,7 +125,7 @@
     MsgPost *msgpost = [MsgPost new];
     msgpost.descricao = self.lblMsgPost.text;
     msgpost.validade = [self checaValidade];
-    [self checaIdioma:opcoesIdioma];
+    [self checaIdioma:_txtIdiomaOutlet.text];
     msgpost.idioma = stringIdioma;
     msgpost.iduser = [def integerForKey:@"iduser"];
     
@@ -135,7 +135,7 @@
                      success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                          if(mappingResult != nil){
                              MsgPost *msgRecebida = [mappingResult firstObject];
-                             NSLog(@"msg : %d",msgRecebida.idmsg);
+                             NSLog(@"msg : %d",(int)msgRecebida.idmsg);
                              [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Enviado com sucesso!",nil)];
                              [NSTimer scheduledTimerWithTimeInterval:3 target:self
                                                             selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
@@ -164,54 +164,50 @@
 
 - (IBAction)btnEnviaMsg:(UIButton *)sender {
     [SVProgressHUD showSuccessWithStatus:@""];
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(queue, ^{
-        [self enviaMsg];
-    });
+    [self checaValores];
 }
 
-- (IBAction)btnIdioma:(UISegmentedControl *)sender {
-    [self checaIdioma:sender];
-}
-
-- (void)checaIdioma:(UISegmentedControl *)indexIdioma{
-    switch (indexIdioma.selectedSegmentIndex){
-        case 0:
-            stringIdioma = @"PT";
-            _lblIdiomaEscolhido.text = @"Português";
-            break;
-        case 1:
-            stringIdioma = @"EN";
-            _lblIdiomaEscolhido.text = @"English";
-            break;
-        
-        case 2:
-            stringIdioma = @"ES";
-            _lblIdiomaEscolhido.text = @"Español";
-            break;
-            
-        default:
-            break;
-    }
-}
-
-- (IBAction)btnValidade:(UISlider *)sender {
-    [self checaValidade];
-}
-
--(int)checaValidade{
-    valorValidade = round(self.btnValidade.value);
-    [self alteraLabelDias];
-    return valorValidade;
-}
-
--(void)alteraLabelDias{
-    if(((int)round(sliderValidade.value))>1){
-        dias = NSLocalizedString(@"dias",nil);
+-(void)checaValores{
+    if(_lblMsgPost.text.length < 141){
+        if (_txtIdiomaOutlet.text.length > 0) {
+            if (_txtValidadeOutlet.text.length >0) {
+                dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+                dispatch_async(queue, ^{
+                    [self enviaMsg];
+                });
+            }else{
+                 [self alert:NSLocalizedString(@"Preencha todos os dados",nil) :NSLocalizedString(@"Erro",nil)];
+            }
+        }else{
+            [self alert:NSLocalizedString(@"Preencha todos os dados",nil) :NSLocalizedString(@"Erro",nil)];
+        }
     }else{
-        dias = NSLocalizedString(@"dia",nil);
+        [self alert:NSLocalizedString(@"A mensagem deve ter apenas 140 caracteres",nil) :NSLocalizedString(@"Erro",nil)];
     }
-    [[self lblDiasValidade]setText:[NSString stringWithFormat:@"%d %@",(int)round(sliderValidade.value),dias]];
+}
+
+- (void) alert:(NSString *)msg :(NSString *)title
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    
+    [alertView show];
+}
+
+- (void)checaIdioma:(NSString *)idioma{
+    if ([idioma isEqualToString:@"Português"]) {
+        stringIdioma = @"PT";
+    }else if ([idioma isEqualToString:@"English"]){
+        stringIdioma = @"EN";
+    }else if ([idioma isEqualToString:@"Spañol"]){
+        stringIdioma = @"ES";
+    }else if ([idioma isEqualToString:@"Italiano"]){
+        stringIdioma = @"IT";
+    }
+}
+
+-(NSString *)checaValidade{
+    valorValidade = _txtValidadeOutlet.text;
+    return valorValidade;
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
@@ -222,7 +218,7 @@
     //if message has text show label and update with number of characters using the NSString.length function
     if (substring.length > 0) {
         lblCharCounter.hidden = NO;
-        lblCharCounter.text = [NSString stringWithFormat:@"%d", substring.length];
+        lblCharCounter.text = [NSString stringWithFormat:@"%d",140-(int)substring.length];
     }
     
     //if message has no text hide label
@@ -252,4 +248,30 @@
     [self presentViewController:loginVC animated:YES completion:nil];
 }
 
+- (IBAction)txtIdioma:(UITextField *)sender {
+    ActionStringDoneBlock done = ^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        if ([sender respondsToSelector:@selector(setText:)]) {
+            [sender performSelector:@selector(setText:) withObject:selectedValue];
+        }
+    };
+    ActionStringCancelBlock cancel = ^(ActionSheetStringPicker *picker) {
+        NSLog(@"Cancelado");
+    };
+    NSArray *idiomas = [NSArray arrayWithObjects:@"Português", @"English", @"Spañol", @"Italiano", nil];
+    [ActionSheetStringPicker showPickerWithTitle:NSLocalizedString(@"Selecione o idioma",nil) rows:idiomas initialSelection:0 doneBlock:done cancelBlock:cancel origin:sender];
+}
+
+- (IBAction)txtValidade:(UITextField *)sender {
+    ActionStringDoneBlock done = ^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        if ([sender respondsToSelector:@selector(setText:)]) {
+            [sender performSelector:@selector(setText:) withObject:selectedValue];
+        }
+    };
+    ActionStringCancelBlock cancel = ^(ActionSheetStringPicker *picker) {
+        NSLog(@"Cancelado");
+    };
+    NSArray *idiomas = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", nil];
+    
+    [ActionSheetStringPicker showPickerWithTitle:NSLocalizedString(@"Selecione o prazo",nil) rows:idiomas initialSelection:0 doneBlock:done cancelBlock:cancel origin:sender];
+}
 @end

@@ -12,7 +12,7 @@
 
 @property (assign, nonatomic) NSInteger idmsg;
 @property (strong, nonatomic) NSString *descricao;
-@property (assign, nonatomic) float validade;
+@property (assign, nonatomic) NSString *validade;
 @property (strong, nonatomic) NSString *idioma;
 @property (assign, nonatomic) NSInteger iduser;
 

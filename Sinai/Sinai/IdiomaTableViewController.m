@@ -40,10 +40,14 @@
     english.sigla = @"EN";
     
     Idioma *espanol = [Idioma new];
-    espanol.descricao = @"Español";
+    espanol.descricao = @"Spañol";
     espanol.sigla = @"ES";
     
-    arrayIdiomas = [[NSArray alloc]initWithObjects:portugues,english,espanol, nil];
+    Idioma *italiano = [Idioma new];
+    italiano.descricao = @"Italiano";
+    italiano.sigla = @"IT";
+    
+    arrayIdiomas = [[NSArray alloc]initWithObjects:portugues,english,espanol,italiano, nil];
 
 #pragma inicializando labels
     _lblEnunciado.text = NSLocalizedString(@"Escolha o idioma dos pedidos que serão carregados",nil);
@@ -82,8 +86,10 @@
     Idioma *idioma = [arrayIdiomas objectAtIndex:indexPath.row];
     [[cell textLabel]setText:[idioma descricao]];
     
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    if ([[def objectForKey:@"siglaIdioma"] isEqualToString:idioma.sigla]) {
+    //[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]]];
+    
+    NSUserDefaults *prefIdioma = [NSUserDefaults standardUserDefaults];
+    if ([[prefIdioma objectForKey:@"siglaIdioma"] isEqualToString:idioma.sigla]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         checkedIndexPath = indexPath;
     }else{
@@ -107,9 +113,9 @@
     
     Idioma *idioma = [arrayIdiomas objectAtIndex:indexPath.row];
     
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    [def setObject:idioma.sigla forKey:@"siglaIdioma"];
-    [def synchronize];
+    NSUserDefaults *prefIdioma = [NSUserDefaults standardUserDefaults];
+    [prefIdioma setObject:idioma.sigla forKey:@"siglaIdioma"];
+    [prefIdioma synchronize];
 }
 
 @end

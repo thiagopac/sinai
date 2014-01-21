@@ -42,7 +42,7 @@
                                         <rect key="frame" x="74" y="134" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="google"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h4C-wb-Jya">
                                         <rect key="frame" x="0.0" y="213" width="320" height="49"/>
@@ -148,31 +148,31 @@
                                         <rect key="frame" x="73" y="152" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="último nome" minimumFontSize="17" clearButtonMode="whileEditing" id="3r1-Ya-IpW">
                                         <rect key="frame" x="73" y="92" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="primeiro nome" minimumFontSize="17" clearButtonMode="whileEditing" id="n7v-cY-kC5">
                                         <rect key="frame" x="73" y="32" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha" minimumFontSize="17" clearButtonMode="whileEditing" id="nc7-ij-lvB">
                                         <rect key="frame" x="73" y="212" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="repita a senha" minimumFontSize="17" clearButtonMode="whileEditing" id="iUg-w2-91Y">
                                         <rect key="frame" x="73" y="272" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cg2-iy-xqC">
                                         <rect key="frame" x="0.0" y="342" width="320" height="49"/>
@@ -278,13 +278,13 @@
                                         <rect key="frame" x="79" y="127" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e-mail" minimumFontSize="17" clearButtonMode="whileEditing" id="JXK-jx-Crr">
                                         <rect key="frame" x="79" y="56" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3rV-go-6O9">
                                         <rect key="frame" x="0.0" y="346" width="159" height="65"/>
@@ -688,15 +688,8 @@
                                 <rect key="frame" x="0.0" y="62" width="320" height="368"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Português" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="stV-zH-z5E">
-                                        <rect key="frame" x="88" y="250" width="62" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uSp-AN-8Aa">
-                                        <rect key="frame" x="0.0" y="319" width="320" height="49"/>
+                                        <rect key="frame" x="0.0" y="318" width="320" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.15294117647058825" green="0.59607843137254901" blue="0.90196078431372551" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
@@ -708,12 +701,12 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enviar.png" id="DQh-ya-maz">
-                                        <rect key="frame" x="0.0" y="319" width="53" height="49"/>
+                                        <rect key="frame" x="0.0" y="318" width="53" height="49"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="uib-jJ-gSy">
-                                        <rect key="frame" x="12" y="72" width="298" height="138"/>
+                                        <rect key="frame" x="20" y="29" width="280" height="129"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -721,83 +714,49 @@
                                             <outlet property="delegate" destination="w3n-yD-QOg" id="Hpw-sh-N0s"/>
                                         </connections>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 dias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="99T-Rt-bey">
-                                        <rect key="frame" x="217" y="250" width="50" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="relogio.png" id="fTW-85-api">
-                                        <rect key="frame" x="202" y="255" width="12" height="12"/>
+                                        <rect key="frame" x="25" y="273" width="12" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balao.png" id="5b5-Rl-Vmo">
-                                        <rect key="frame" x="72" y="255" width="12" height="12"/>
+                                        <rect key="frame" x="25" y="224" width="12" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     </imageView>
                                     <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VKO-eK-TWP">
-                                        <rect key="frame" x="126" y="53" width="37" height="21"/>
+                                        <rect key="frame" x="128" y="10" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="11"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
-                                    <view contentMode="scaleToFill" id="vgZ-FY-ySy">
-                                        <rect key="frame" x="0.0" y="271" width="320" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cad-IM-6ew">
-                                                <rect key="frame" x="296" y="13" width="14" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="30" id="xQz-x5-k3k">
-                                                <rect key="frame" x="18" y="7" width="274" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.073962135036496346" green="0.84129790145985406" blue="0.87058830261230469" alpha="1" colorSpace="deviceRGB"/>
-                                                <connections>
-                                                    <action selector="btnValidade:" destination="w3n-yD-QOg" eventType="valueChanged" id="tl1-jL-iIx"/>
-                                                </connections>
-                                            </slider>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyv-Pe-W2e">
-                                                <rect key="frame" x="8" y="13" width="11" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="12"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="G8i-Lo-dLc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fgZ-5g-6a9">
-                                                <rect key="frame" x="9" y="13" width="303" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <segments>
-                                                    <segment title="Português"/>
-                                                    <segment title="English"/>
-                                                    <segment title="Español"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="btnIdioma:" destination="w3n-yD-QOg" eventType="valueChanged" id="Lgq-Ye-KlD"/>
-                                                </connections>
-                                            </segmentedControl>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                    </view>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="Ci6-CD-Ezh">
+                                        <rect key="frame" x="46" y="210" width="254" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txtIdioma:" destination="w3n-yD-QOg" eventType="touchDown" id="FWO-FG-uFT"/>
+                                            <outlet property="delegate" destination="w3n-yD-QOg" id="9bw-6B-qup"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="9cT-tE-z1l">
+                                        <rect key="frame" x="46" y="259" width="254" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txtValidade:" destination="w3n-yD-QOg" eventType="touchDown" id="abe-9t-gcJ"/>
+                                            <outlet property="delegate" destination="w3n-yD-QOg" id="hPA-W1-Xzz"/>
+                                        </connections>
+                                    </textField>
                                     <view contentMode="scaleToFill" id="D7a-3K-7Fg">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="368"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cY4-Yf-sB5">
-                                                <rect key="frame" x="0.0" y="126" width="320" height="49"/>
+                                                <rect key="frame" x="0.0" y="159" width="320" height="49"/>
                                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
                                                 <state key="normal" title="fazer login">
@@ -808,7 +767,7 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login.png" id="Ct6-b8-vP2">
-                                                <rect key="frame" x="0.0" y="126" width="53" height="49"/>
+                                                <rect key="frame" x="0.0" y="159" width="53" height="49"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -826,13 +785,10 @@
                     <connections>
                         <outlet property="btnEnviaMsgOutlet" destination="uSp-AN-8Aa" id="NQL-LJ-iut"/>
                         <outlet property="btnLogin" destination="cY4-Yf-sB5" id="dun-LY-Q3u"/>
-                        <outlet property="btnValidade" destination="xQz-x5-k3k" id="Em4-bj-7bQ"/>
                         <outlet property="lblCharCounter" destination="VKO-eK-TWP" id="Rdc-wl-SVh"/>
-                        <outlet property="lblDiasValidade" destination="99T-Rt-bey" id="Ycp-Wk-kej"/>
-                        <outlet property="lblIdiomaEscolhido" destination="stV-zH-z5E" id="Q8A-fO-OMx"/>
                         <outlet property="lblMsgPost" destination="uib-jJ-gSy" id="8rP-mh-bVZ"/>
-                        <outlet property="opcoesIdioma" destination="fgZ-5g-6a9" id="2eB-zN-1Hz"/>
-                        <outlet property="sliderValidade" destination="xQz-x5-k3k" id="CNT-Lu-hWh"/>
+                        <outlet property="txtIdiomaOutlet" destination="Ci6-CD-Ezh" id="CUf-1E-Wj7"/>
+                        <outlet property="txtValidadeOutlet" destination="9cT-tE-z1l" id="yOi-g0-jgw"/>
                         <outlet property="viewBloqueio" destination="D7a-3K-7Fg" id="U4M-er-iUC"/>
                     </connections>
                 </viewController>
@@ -902,19 +858,19 @@
                                         <rect key="frame" x="75" y="57" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="senha atual" minimumFontSize="17" clearButtonMode="whileEditing" id="w3s-JZ-tTC">
                                         <rect key="frame" x="75" y="117" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nova senha" minimumFontSize="17" clearButtonMode="whileEditing" id="X3t-3e-8WH">
                                         <rect key="frame" x="75" y="177" width="201" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

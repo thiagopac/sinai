@@ -105,9 +105,9 @@
     RKMapping *mapping = [MappingProvider msgGetMapping];
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping method:false pathPattern:nil keyPath:nil statusCodes:statusCodeSet];
     
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    if([def objectForKey:@"siglaIdioma"]){
-        idioma = [def objectForKey:@"siglaIdioma"];
+    NSUserDefaults *prefIdioma = [NSUserDefaults standardUserDefaults];
+    if([prefIdioma objectForKey:@"siglaIdioma"]){
+        idioma = [prefIdioma objectForKey:@"siglaIdioma"];
     }else{
         idioma = @"PT";
     }
@@ -132,7 +132,7 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"ERROR: %@", error);
         NSLog(@"Response: %@", operation.HTTPRequestOperation.responseString);
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Ocorreu um erro",nil)];
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Não há nenhum pedido neste idioma",nil)];
     }];
     
     [operation start];

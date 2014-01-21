@@ -45,16 +45,21 @@
 }
 
 - (void)resetDefaults {
-    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
-    NSDictionary * dict = [def dictionaryRepresentation];
-    for (id key in dict) {
-        [def removeObjectForKey:key];
-    }
-    [def synchronize];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"email"];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"iduser"];
+//    
+//    
+//    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+//    NSDictionary * dict = [def dictionaryRepresentation];
+//    for (id key in dict) {
+//        [def removeObjectForKey:key];
+//    }
+//    [def synchronize];
+    
     [self.btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
     _btnMeusPedidos.enabled = NO;
     _btnMeusPedidos.alpha = 0.6;
-    self.lblEmail.text = nil;
+    _lblEmail.text = NSLocalizedString(@"identifique-se",nil);
     [SVProgressHUD dismiss];
     
 }
@@ -71,7 +76,7 @@
         [self.btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
         _btnMeusPedidos.enabled = NO;
         _btnMeusPedidos.alpha = 0.6;
-        self.lblEmail.text = nil;
+        _lblEmail.text = NSLocalizedString(@"identifique-se",nil);
     }
 }
 

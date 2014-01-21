@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 3
 #define COCOAPODS_VERSION_PATCH_AFNetworking 3
 
+// ActionSheetPicker
+#define COCOAPODS_POD_AVAILABLE_ActionSheetPicker
+#define COCOAPODS_VERSION_MAJOR_ActionSheetPicker 0
+#define COCOAPODS_VERSION_MINOR_ActionSheetPicker 0
+#define COCOAPODS_VERSION_PATCH_ActionSheetPicker 2
+
 // RestKit
 #define COCOAPODS_POD_AVAILABLE_RestKit
 #define COCOAPODS_VERSION_MAJOR_RestKit 0
