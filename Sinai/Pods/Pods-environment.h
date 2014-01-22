@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_ActionSheetPicker 0
 #define COCOAPODS_VERSION_PATCH_ActionSheetPicker 2
 
+// GoogleAnalytics-iOS-SDK
+#define COCOAPODS_POD_AVAILABLE_GoogleAnalytics_iOS_SDK
+#define COCOAPODS_VERSION_MAJOR_GoogleAnalytics_iOS_SDK 3
+#define COCOAPODS_VERSION_MINOR_GoogleAnalytics_iOS_SDK 0
+#define COCOAPODS_VERSION_PATCH_GoogleAnalytics_iOS_SDK 3
+
 // RestKit
 #define COCOAPODS_POD_AVAILABLE_RestKit
 #define COCOAPODS_VERSION_MAJOR_RestKit 0
@@ -70,7 +76,7 @@
 #define COCOAPODS_POD_AVAILABLE_TPKeyboardAvoiding
 #define COCOAPODS_VERSION_MAJOR_TPKeyboardAvoiding 1
 #define COCOAPODS_VERSION_MINOR_TPKeyboardAvoiding 2
-#define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 1
+#define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 2
 
 // TransitionKit
 #define COCOAPODS_POD_AVAILABLE_TransitionKit

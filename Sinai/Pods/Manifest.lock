@@ -1,6 +1,7 @@
 PODS:
   - ActionSheetPicker (0.0.2)
   - AFNetworking (1.3.3)
+  - GoogleAnalytics-iOS-SDK (3.0.3)
   - RestKit (0.20.3):
     - RestKit/Core
   - RestKit/Core (0.20.3):
@@ -18,11 +19,12 @@ PODS:
     - TransitionKit (= 1.1.1)
   - SOCKit (1.1)
   - SVProgressHUD (1.0)
-  - TPKeyboardAvoiding (1.2.1)
+  - TPKeyboardAvoiding (1.2.2)
   - TransitionKit (1.1.1)
 
 DEPENDENCIES:
   - ActionSheetPicker
+  - GoogleAnalytics-iOS-SDK (~> 3.0.3)
   - RestKit (~> 0.20.3)
   - SVProgressHUD
   - TPKeyboardAvoiding
@@ -30,10 +32,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ActionSheetPicker: 16e212011d5c2e92b3e38609a58b93919b4056aa
   AFNetworking: 61fdd49e2ffe6380378df37b3b6e70630bb9dd66
+  GoogleAnalytics-iOS-SDK: 7b0e55cfe5e70d60478a7b105f15ac71e8bc373e
   RestKit: 1f181c180105a92f11ec4f6cd7de37625e516d83
   SOCKit: 2f3bc4d07910de12dcc202815e07db68a3802581
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
-  TPKeyboardAvoiding: 0536c563e6c8b8e95a7c4bf87fca9c0991f5e826
+  TPKeyboardAvoiding: de224784615ac78d1c351df28b0696d402449c41
   TransitionKit: d0e3344aac92991395d4c2e72d9c5a8ceeb12910
 
-COCOAPODS: 0.25.0
+COCOAPODS: 0.29.0

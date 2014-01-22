@@ -11,7 +11,6 @@
 		6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E01964E1841327C00ACACE7 /* ControleTeclado.m */; };
 		6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E01964F1841327C00ACACE7 /* ControleTeclado.xib */; };
 		6E0361711839B5A600748088 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0361701839B5A600748088 /* User.m */; };
-		6E13549D186213C100E7F536 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E13549C186213C100E7F536 /* libGoogleAnalyticsServices.a */; };
 		6E1354A4186213F300E7F536 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB92B50186206DC00EA674C /* CoreData.framework */; };
 		6E1354A51862140000E7F536 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB92B52186206EA00EA674C /* SystemConfiguration.framework */; };
 		6E1354A61862140900E7F536 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB92B541862070900EA674C /* libz.dylib */; };
@@ -103,13 +102,6 @@
 		6E01964F1841327C00ACACE7 /* ControleTeclado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControleTeclado.xib; sourceTree = "<group>"; };
 		6E03616F1839B5A600748088 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6E0361701839B5A600748088 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		6E13549C186213C100E7F536 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		6E13549E186213E200E7F536 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		6E13549F186213E200E7F536 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		6E1354A0186213E200E7F536 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		6E1354A1186213E200E7F536 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		6E1354A2186213E200E7F536 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		6E1354A3186213E200E7F536 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		6E1354A71862147C00E7F536 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiomaTableViewController.h; sourceTree = "<group>"; };
 		6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiomaTableViewController.m; sourceTree = "<group>"; };
@@ -227,7 +219,6 @@
 				6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */,
 				6E5A36401839B236009B7ED5 /* UIKit.framework in Frameworks */,
 				6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */,
-				6E13549D186213C100E7F536 /* libGoogleAnalyticsServices.a in Frameworks */,
 				1D2711DB3DEB46899D4D0CC3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,20 +310,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		6E1354A91862182700E7F536 /* Google Analytics SDK */ = {
-			isa = PBXGroup;
-			children = (
-				6E13549E186213E200E7F536 /* GAI.h */,
-				6E13549F186213E200E7F536 /* GAIDictionaryBuilder.h */,
-				6E1354A0186213E200E7F536 /* GAIFields.h */,
-				6E1354A1186213E200E7F536 /* GAILogger.h */,
-				6E1354A2186213E200E7F536 /* GAITrackedViewController.h */,
-				6E1354A3186213E200E7F536 /* GAITracker.h */,
-				6E13549C186213C100E7F536 /* libGoogleAnalyticsServices.a */,
-			);
-			name = "Google Analytics SDK";
-			sourceTree = "<group>";
-		};
 		6E5A362F1839B236009B7ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -392,7 +369,6 @@
 		6E5A36421839B236009B7ED5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E1354A91862182700E7F536 /* Google Analytics SDK */,
 				6E5A36431839B236009B7ED5 /* Sinai-Info.plist */,
 				6E5A36471839B236009B7ED5 /* main.m */,
 				6E5A36491839B236009B7ED5 /* Sinai-Prefix.pch */,
