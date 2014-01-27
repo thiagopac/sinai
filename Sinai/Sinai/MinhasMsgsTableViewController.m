@@ -12,10 +12,12 @@
 #import <SVProgressHUD.h>
 #import "MsgGet.h"
 #import "MinhaMsgCell.h"
+#import "Output.h"
+#import "OracaoFeita.h"
 
 @interface MinhasMsgsTableViewController ()
 
-@property (nonatomic, strong) NSArray *minhasMsgs;
+@property (nonatomic, strong) NSMutableArray *minhasMsgs;
 
 @end
 
@@ -56,7 +58,7 @@
                                                                         responseDescriptors:@[responseDescriptor]];
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
-        self.minhasMsgs = mappingResult.array;
+        self.minhasMsgs = [NSMutableArray arrayWithArray:mappingResult.array];
         [self.tableView reloadData];
         [SVProgressHUD dismiss];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -132,6 +134,64 @@
         cell.lblPublicacao.text = NSLocalizedString(@"Ativo",nil);
     
     [[cell lblMsg] setFont:[UIFont fontWithName:@"HelveticaNeue-Thin" size:12]];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        MsgGet *msgget = [self.minhasMsgs objectAtIndex:indexPath.row];
+        [self deleteMsgPorIdmsg:msgget];
+        
+        [self.minhasMsgs removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    }
+}
+
+-(void)deleteMsgPorIdmsg:(MsgGet *)msgget{
+    
+    RKObjectMapping *requestMapping = [RKObjectMapping requestMapping];
+    [requestMapping addAttributeMappingsFromArray:@[@"idmsg"]];
+    
+    RKObjectMapping *responseMapping = [RKObjectMapping mappingForClass:[Output class]];
+    [responseMapping addAttributeMappingsFromArray:@[@"output"]];
+    
+    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:[OracaoFeita class] rootKeyPath:nil method:RKRequestMethodDELETE];
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping
+                                                                                            method:RKRequestMethodDELETE
+                                                                                       pathPattern:nil
+                                                                                           keyPath:nil
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    NSURL *url = [NSURL URLWithString:API];
+    NSString  *path= [NSString stringWithFormat:@"deletemsg/%d",msgget.idmsg];
+    
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:url];
+    [objectManager addRequestDescriptor:requestDescriptor];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+    objectManager.requestSerializationMIMEType = RKMIMETypeJSON;
+    
+    OracaoFeita *msg = [OracaoFeita new];
+    
+    msg.idmsg = msgget.idmsg;
+    
+    [objectManager deleteObject:msg
+                        path:path
+                  parameters:nil
+                     success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                         if(mappingResult != nil){
+                             Output *success = [mappingResult firstObject];
+                             NSLog(@"msg : %@",success.output);
+                             [SVProgressHUD dismiss];
+                         }else{
+                             [SVProgressHUD dismiss];
+                             NSLog(@"Erro, nenhuma resposta!");
+                         }
+                         
+                     }
+                     failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                     }];
 }
 
 @end

@@ -132,7 +132,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) alert:(NSString *)msg :(NSString *)title
+- (void)alert:(NSString *)msg :(NSString *)title
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     

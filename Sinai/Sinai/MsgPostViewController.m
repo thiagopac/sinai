@@ -17,10 +17,10 @@
 
 @interface MsgPostViewController ()<ControleTecladoDelegate, UITextViewDelegate>{
     NSString *valorValidade;
-    IBOutlet UILabel *lblCharCounter;
     NSString *stringIdioma;
 }
 @property (nonatomic, strong) ControleTeclado *controleTeclado;
+@property  IBOutlet UILabel *lblCharCounter;
 @end
 
 @implementation MsgPostViewController
@@ -140,6 +140,10 @@
                              [NSTimer scheduledTimerWithTimeInterval:3 target:self
                                                             selector:@selector(dismissAfterSuccess:) userInfo:nil repeats:NO];
                              [self.lblMsgPost setText:@""];
+                             [self.txtValidadeOutlet setText:@""];
+                             [self.txtIdiomaOutlet setText:@""];
+                             [self.lblCharCounter setText:@"140"];
+
                          }else{
                              [SVProgressHUD dismiss];
                              NSLog(@"Erro, nenhuma resposta!");
@@ -217,13 +221,13 @@
     
     //if message has text show label and update with number of characters using the NSString.length function
     if (substring.length > 0) {
-        lblCharCounter.hidden = NO;
-        lblCharCounter.text = [NSString stringWithFormat:@"%d",140-(int)substring.length];
+        _lblCharCounter.hidden = NO;
+        _lblCharCounter.text = [NSString stringWithFormat:@"%d",140-(int)substring.length];
     }
     
     //if message has no text hide label
     if (substring.length == 0) {
-        lblCharCounter.hidden = YES;
+        _lblCharCounter.hidden = YES;
     }
     
     //if message length is equal to 15 characters display alert view
@@ -232,12 +236,12 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:NSLocalizedString(@"Limite de 140 caracteres",nil) delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         //if character count is over max number change label to red text
-        lblCharCounter.textColor = [UIColor redColor];
+        _lblCharCounter.textColor = [UIColor redColor];
     }
     
     //if message is less than 512 characters change font to black
     if (substring.length < 141) {
-        lblCharCounter.textColor = [UIColor grayColor];
+        _lblCharCounter.textColor = [UIColor grayColor];
     }
 }
 
@@ -270,7 +274,7 @@
     ActionStringCancelBlock cancel = ^(ActionSheetStringPicker *picker) {
         NSLog(@"Cancelado");
     };
-    NSArray *idiomas = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", nil];
+    NSArray *idiomas = [NSArray arrayWithObjects:[NSString stringWithFormat:@"1 %@",NSLocalizedString(@"dia",nil)], [NSString stringWithFormat:@"2 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"3 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"4 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"5 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"6 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"7 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"8 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"9 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"10 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"11 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"12 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"13 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"14 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"15 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"16 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"17 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"18 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"19 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"20 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"21 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"22 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"23 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"24 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"25 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"26 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"27 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"28 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"29 %@",NSLocalizedString(@"dias",nil)],[NSString stringWithFormat:@"30 %@",NSLocalizedString(@"dias",nil)], nil];
     
     [ActionSheetStringPicker showPickerWithTitle:NSLocalizedString(@"Selecione o prazo",nil) rows:idiomas initialSelection:0 doneBlock:done cancelBlock:cancel origin:sender];
 }

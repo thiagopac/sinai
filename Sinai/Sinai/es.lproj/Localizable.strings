@@ -42,7 +42,7 @@
 
 "idioma" = "idioma";
 
-"identifique-se" = "no identificado";
+"identifique-se" = "no ha iniciado sesión";
 
 "registrar" = "registrar";
 
@@ -105,4 +105,8 @@
 "Selecione o prazo" = "Seleccione el término";
 
 "Preencha todos os dados" = "Rellene todos los campos";
+
+"Não há nenhum pedido neste idioma" = "No hay mensajes en esta lengua";
+
+"A mensagem deve ter apenas 140 caracteres" = "El mensaje debe tener sólo 140 caracteres";
 

@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_lblMsgGet addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
+    [_lblMsgGet setTextContainerInset:UIEdgeInsetsMake(30, 0, 0, 0)];
     [SVProgressHUD show];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
@@ -91,13 +91,6 @@
     [path closePath];
     
     return path.CGPath;
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    UITextView *tv = object;
-    CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height * [tv zoomScale])/2.0;
-    topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
-    tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
 }
 
 - (void)loadMsgGet {
