@@ -41,7 +41,7 @@
     });
     
 #pragma navigationbar
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icone_nav.png"]];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 

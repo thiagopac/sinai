@@ -14,13 +14,13 @@
 
 @interface MsgPostViewController : GAITrackedViewController <UITextFieldDelegate>
 
+@property (nonatomic, strong) AbstractActionSheetPicker *actionSheetPicker;
 @property (strong, nonatomic) IBOutlet UITextView *lblMsgPost;
 @property (strong, nonatomic) IBOutlet UIButton *btnLogin;
 @property (strong, nonatomic) IBOutlet UIView *viewBloqueio;
 @property (strong, nonatomic) IBOutlet UIButton *btnEnviaMsgOutlet;
 @property (strong, nonatomic) IBOutlet UITextField *txtIdiomaOutlet;
 @property (strong, nonatomic) IBOutlet UITextField *txtValidadeOutlet;
-@property (nonatomic, strong) AbstractActionSheetPicker *actionSheetPicker;
 
 - (IBAction)btnEnviaMsg:(UIButton *)sender;
 - (IBAction)btnLogin:(UIButton *)sender;

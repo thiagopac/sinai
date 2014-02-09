@@ -35,7 +35,7 @@
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
     
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icone_nav.png"]];
    
 #pragma inicializando labels
     [_btnLoginOutlet setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];

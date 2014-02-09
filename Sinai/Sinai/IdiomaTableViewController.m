@@ -40,7 +40,7 @@
     english.sigla = @"EN";
     
     Idioma *espanol = [Idioma new];
-    espanol.descricao = @"Spañol";
+    espanol.descricao = @"Español";
     espanol.sigla = @"ES";
     
     Idioma *italiano = [Idioma new];
@@ -53,7 +53,7 @@
     _lblEnunciado.text = NSLocalizedString(@"Escolha o idioma dos pedidos que serão carregados",nil);
     
 #pragma navigationbar
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icone_nav.png"]];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 

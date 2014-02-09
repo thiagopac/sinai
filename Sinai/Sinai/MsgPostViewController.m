@@ -71,13 +71,13 @@
 #pragma inicializando labels
     [_btnEnviaMsgOutlet setTitle:NSLocalizedString(@"enviar",nil) forState:UIControlStateNormal];
     [_btnLogin setTitle:NSLocalizedString(@"fazer login",nil) forState:UIControlStateNormal];
-    _txtIdiomaOutlet.placeholder = NSLocalizedString(@"Selecione o idioma",nil);
+    _txtIdiomaOutlet.placeholder = NSLocalizedString(@"Selecione o idioma deste pedido",nil);
     _txtValidadeOutlet.placeholder = NSLocalizedString(@"Selecione a validade (em dias)",nil);
     
 #pragma navigationbar
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:75/255.0f green:193/255.0f blue:210/255.0f alpha:1.0f];
     
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icone_nav.png"]];
 
 #pragma uitextview fake placeholder
     _lblMsgPost.delegate = self;
@@ -261,7 +261,7 @@
     ActionStringCancelBlock cancel = ^(ActionSheetStringPicker *picker) {
         NSLog(@"Cancelado");
     };
-    NSArray *idiomas = [NSArray arrayWithObjects:@"Português", @"English", @"Spañol", @"Italiano", nil];
+    NSArray *idiomas = [NSArray arrayWithObjects:@"Português", @"English", @"Español", @"Italiano", nil];
     [ActionSheetStringPicker showPickerWithTitle:NSLocalizedString(@"Selecione o idioma",nil) rows:idiomas initialSelection:0 doneBlock:done cancelBlock:cancel origin:sender];
 }
 
