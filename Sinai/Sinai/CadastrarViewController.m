@@ -11,7 +11,7 @@
 #import "User.h"
 #import <RestKit/RestKit.h>
 #import "MappingProvider.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "ControleTeclado.h"
 
 @interface CadastrarViewController ()<ControleTecladoDelegate, UITextFieldDelegate>
@@ -158,7 +158,7 @@
 }
 
 - (IBAction)btnRegistrar:(UIButton *)sender {
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self verificar];
 }
 

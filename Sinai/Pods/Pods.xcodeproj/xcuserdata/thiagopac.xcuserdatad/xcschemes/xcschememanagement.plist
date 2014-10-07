@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ActionSheetPicker.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-GoogleAnalytics-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,11 +20,6 @@
 			<false/>
 		</dict>
 		<key>Pods-SOCKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,47 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2EAD9F93DCFA4EDF85EE69A8</key>
+		<key>720EF080218D550E4F8F2186</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3365D2925EFA44E5A8F46961</key>
+		<key>74406ABF4AB9DC8A3FB6B3BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>341790C6E2264AE09E97BEEA</key>
+		<key>7D6FA6853091925E17FD2DE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4FF0DD36F2EB4E8E88BFFA8E</key>
+		<key>96956C40FC7B3F6AAF306AEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6733A186DD06470F915BAA75</key>
+		<key>B266DB0DB61B4E9A24310039</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>893C53EF2BEF4E5FAD58F6AA</key>
+		<key>DD19412216F7321622A34E54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CCBA28E4D80492DAD0A8DF6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9247A210B83646D8914DB4EA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D1CA1A44F5E4478299D96115</key>
+		<key>DE5698F7489330677276B4DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

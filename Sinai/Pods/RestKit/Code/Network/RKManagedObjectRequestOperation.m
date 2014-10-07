@@ -432,9 +432,6 @@ BOOL RKDoesArrayOfResponseDescriptorsContainOnlyEntityMappings(NSArray *response
 
 @dynamic willMapDeserializedResponseBlock;
 @synthesize canSkipMapping = _canSkipMapping;
-@dynamic error;
-@dynamic mappingResult;
-
 
 // Designated initializer
 - (id)initWithHTTPRequestOperation:(RKHTTPRequestOperation *)requestOperation responseDescriptors:(NSArray *)responseDescriptors

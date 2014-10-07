@@ -9,7 +9,7 @@
 #import "MinhasMsgsTableViewController.h"
 #import <Restkit/RestKit.h>
 #import "MappingProvider.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "MsgGet.h"
 #import "MinhaMsgCell.h"
 #import "Output.h"
@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         [self loadMinhasMsgs];

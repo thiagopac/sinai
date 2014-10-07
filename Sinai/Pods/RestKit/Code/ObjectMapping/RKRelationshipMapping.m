@@ -28,9 +28,6 @@
 @end
 
 @implementation RKRelationshipMapping
-@synthesize sourceKeyPath = _sourceKeyPath;
-@synthesize destinationKeyPath = _destinationKeyPath;
-
 
 + (instancetype)relationshipMappingFromKeyPath:(NSString *)sourceKeyPath toKeyPath:(NSString *)destinationKeyPath withMapping:(RKMapping *)mapping
 {

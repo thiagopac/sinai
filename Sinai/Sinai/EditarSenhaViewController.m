@@ -11,7 +11,7 @@
 #import "Output.h"
 #import <RestKit/RestKit.h>
 #import "MappingProvider.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "ControleTeclado.h"
 
 @interface EditarSenhaViewController ()<ControleTecladoDelegate>
@@ -136,7 +136,7 @@
 }
 
 - (IBAction)btnEnviar:(UIButton *)sender {
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self verificar];
 }
 

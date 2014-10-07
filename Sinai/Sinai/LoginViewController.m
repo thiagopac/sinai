@@ -11,7 +11,7 @@
 #import "User.h"
 #import <RestKit/RestKit.h>
 #import "MappingProvider.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "ControleTeclado.h"
 
 @interface LoginViewController ()<ControleTecladoDelegate>
@@ -123,7 +123,7 @@
 }
 
 - (IBAction)btnLogin:(UIButton *)sender {
-    [SVProgressHUD show];
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self login];
     //[self.view endEditing:YES];
 }

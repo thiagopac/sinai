@@ -8,7 +8,7 @@
 
 #import "ConfigViewController.h"
 #import "LoginViewController.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 
 @interface ConfigViewController ()
 
@@ -96,7 +96,7 @@
         [loginVC setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
         [self presentViewController:loginVC animated:YES completion:nil];
     }else{
-        [SVProgressHUD show];
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
         [self resetDefaults];
     }
 }

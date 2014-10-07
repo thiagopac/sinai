@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2711DB3DEB46899D4D0CC3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105C1F8614E42DDBC5028F6 /* libPods.a */; };
+		030046141ABC4103A54D07D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9105C1F8614E42DDBC5028F6 /* libPods.a */; };
 		6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E01964E1841327C00ACACE7 /* ControleTeclado.m */; };
 		6E0196511841327C00ACACE7 /* ControleTeclado.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E01964F1841327C00ACACE7 /* ControleTeclado.xib */; };
 		6E0361711839B5A600748088 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0361701839B5A600748088 /* User.m */; };
@@ -43,6 +43,9 @@
 		6E5A365C1839B236009B7ED5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363B1839B236009B7ED5 /* Foundation.framework */; };
 		6E5A365D1839B236009B7ED5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5A363F1839B236009B7ED5 /* UIKit.framework */; };
 		6E5A36671839B236009B7ED5 /* SinaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A36661839B236009B7ED5 /* SinaiTests.m */; };
+		6E6588CD19C7209D006B9730 /* ExpirationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6588CC19C7209D006B9730 /* ExpirationTableViewController.m */; };
+		6E731E3E19E2D67A009965B6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E731E3C19E2D67A009965B6 /* SVProgressHUD.m */; };
+		6E731E3F19E2D67A009965B6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E731E3D19E2D67A009965B6 /* SVProgressHUD.bundle */; };
 		6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */; };
 		6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */; };
 		6E7BE9661842C1CE00B6F3E5 /* CadastrarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */; };
@@ -50,6 +53,7 @@
 		6E9139BF183C2B400090FEE3 /* OracaoFeita.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9139BE183C2B400090FEE3 /* OracaoFeita.m */; };
 		6E964CAD1839B6D300515563 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAC1839B6D300515563 /* Login.m */; };
 		6E964CB01839B70300515563 /* MsgPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E964CAF1839B70300515563 /* MsgPost.m */; };
+		6E984BB319C67C800016A797 /* LanguageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E984BB219C67C800016A797 /* LanguageTableViewController.m */; };
 		6E9B644F187B51D200E3AEF8 /* user_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B644D187B51D200E3AEF8 /* user_badge.png */; };
 		6E9B6450187B51D200E3AEF8 /* user_badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B644E187B51D200E3AEF8 /* user_badge@2x.png */; };
 		6E9B6453187B521000E3AEF8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9B6451187B521000E3AEF8 /* logo.png */; };
@@ -98,7 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0352E7E43A384758B6266DBE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		09009220864DDA358536E29E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1E812E7E1C4D0091DD1D2405 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6E01964D1841327C00ACACE7 /* ControleTeclado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleTeclado.h; sourceTree = "<group>"; };
 		6E01964E1841327C00ACACE7 /* ControleTeclado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleTeclado.m; sourceTree = "<group>"; };
 		6E01964F1841327C00ACACE7 /* ControleTeclado.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControleTeclado.xib; sourceTree = "<group>"; };
@@ -147,8 +152,13 @@
 		6E5A365A1839B236009B7ED5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E5A36621839B236009B7ED5 /* SinaiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SinaiTests-Info.plist"; sourceTree = "<group>"; };
 		6E5A36661839B236009B7ED5 /* SinaiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaiTests.m; sourceTree = "<group>"; };
+		6E6588CB19C7209D006B9730 /* ExpirationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpirationTableViewController.h; sourceTree = "<group>"; };
+		6E6588CC19C7209D006B9730 /* ExpirationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpirationTableViewController.m; sourceTree = "<group>"; };
 		6E68E577186D1FAA00994E36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		6E68E578186D1FAA00994E36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E731E3B19E2D67A009965B6 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		6E731E3C19E2D67A009965B6 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6E731E3D19E2D67A009965B6 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
@@ -163,6 +173,8 @@
 		6E964CAC1839B6D300515563 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		6E964CAE1839B70300515563 /* MsgPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgPost.h; sourceTree = "<group>"; };
 		6E964CAF1839B70300515563 /* MsgPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgPost.m; sourceTree = "<group>"; };
+		6E984BB119C67C800016A797 /* LanguageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageTableViewController.h; sourceTree = "<group>"; };
+		6E984BB219C67C800016A797 /* LanguageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageTableViewController.m; sourceTree = "<group>"; };
 		6E9B644D187B51D200E3AEF8 /* user_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_badge.png; sourceTree = "<group>"; };
 		6E9B644E187B51D200E3AEF8 /* user_badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_badge@2x.png"; sourceTree = "<group>"; };
 		6E9B6451187B521000E3AEF8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -223,7 +235,7 @@
 				6E5A363E1839B236009B7ED5 /* CoreGraphics.framework in Frameworks */,
 				6E5A36401839B236009B7ED5 /* UIKit.framework in Frameworks */,
 				6E5A363C1839B236009B7ED5 /* Foundation.framework in Frameworks */,
-				1D2711DB3DEB46899D4D0CC3 /* libPods.a in Frameworks */,
+				030046141ABC4103A54D07D7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +252,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DF5916985E96C7C261365E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E812E7E1C4D0091DD1D2405 /* Pods.debug.xcconfig */,
+				09009220864DDA358536E29E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E0196521841329F00ACACE7 /* ControleTeclado */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +274,7 @@
 		6E019653184132B600ACACE7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6E731E4019E2D680009965B6 /* SVProgressHUD */,
 				6E9B644C187B44AA00E3AEF8 /* Images */,
 				6E0196521841329F00ACACE7 /* ControleTeclado */,
 			);
@@ -292,24 +314,9 @@
 		6E03616D1839B54A00748088 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */,
-				6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */,
-				6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */,
-				6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */,
-				6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */,
-				6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */,
-				6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */,
-				6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */,
-				6E7BE9641842C1CE00B6F3E5 /* CadastrarViewController.h */,
-				6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */,
-				6EAE581718458DCC0071D4E2 /* MinhasMsgsTableViewController.h */,
-				6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */,
-				6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */,
-				6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */,
-				6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */,
-				6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */,
-				6EBFF874185FDFA400062D0A /* EditarSenhaViewController.h */,
-				6EBFF875185FDFA400062D0A /* EditarSenhaViewController.m */,
+				6ECC48AE193C163E009ECDA3 /* MsgGet */,
+				6ECC48AF193C1646009ECDA3 /* MsgPost */,
+				6ECC48B0193C1657009ECDA3 /* Cofigurações */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -321,7 +328,7 @@
 				6E5A36601839B236009B7ED5 /* SinaiTests */,
 				6E5A363A1839B236009B7ED5 /* Frameworks */,
 				6E5A36391839B236009B7ED5 /* Products */,
-				0352E7E43A384758B6266DBE /* Pods.xcconfig */,
+				2DF5916985E96C7C261365E7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -397,6 +404,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6E731E4019E2D680009965B6 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6E731E3B19E2D67A009965B6 /* SVProgressHUD.h */,
+				6E731E3C19E2D67A009965B6 /* SVProgressHUD.m */,
+				6E731E3D19E2D67A009965B6 /* SVProgressHUD.bundle */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		6E9B644C187B44AA00E3AEF8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +484,49 @@
 				6EC363D7183AB02100610ECE /* MappingProvider.m */,
 			);
 			name = MappingProvider;
+			sourceTree = "<group>";
+		};
+		6ECC48AE193C163E009ECDA3 /* MsgGet */ = {
+			isa = PBXGroup;
+			children = (
+				6EC363DC183ABA8E00610ECE /* MsgGetViewController.h */,
+				6EC363DD183ABA8E00610ECE /* MsgGetViewController.m */,
+			);
+			name = MsgGet;
+			sourceTree = "<group>";
+		};
+		6ECC48AF193C1646009ECDA3 /* MsgPost */ = {
+			isa = PBXGroup;
+			children = (
+				6E87A4CD183D9821008CA7EA /* MsgPostViewController.h */,
+				6E87A4CE183D9821008CA7EA /* MsgPostViewController.m */,
+				6E984BB119C67C800016A797 /* LanguageTableViewController.h */,
+				6E984BB219C67C800016A797 /* LanguageTableViewController.m */,
+				6E6588CB19C7209D006B9730 /* ExpirationTableViewController.h */,
+				6E6588CC19C7209D006B9730 /* ExpirationTableViewController.m */,
+			);
+			name = MsgPost;
+			sourceTree = "<group>";
+		};
+		6ECC48B0193C1657009ECDA3 /* Cofigurações */ = {
+			isa = PBXGroup;
+			children = (
+				6E7BE95E1842827B00B6F3E5 /* LoginViewController.h */,
+				6E7BE95F1842827B00B6F3E5 /* LoginViewController.m */,
+				6E7BE96118428B9E00B6F3E5 /* ConfigViewController.h */,
+				6E7BE96218428B9E00B6F3E5 /* ConfigViewController.m */,
+				6E7BE9641842C1CE00B6F3E5 /* CadastrarViewController.h */,
+				6E7BE9651842C1CE00B6F3E5 /* CadastrarViewController.m */,
+				6EAE581718458DCC0071D4E2 /* MinhasMsgsTableViewController.h */,
+				6EAE581818458DCC0071D4E2 /* MinhasMsgsTableViewController.m */,
+				6E1F3F171846DB8800172714 /* IdiomaTableViewController.h */,
+				6E1F3F181846DB8800172714 /* IdiomaTableViewController.m */,
+				6E40A4F8184C21220077F0D8 /* RelembrarSenhaViewController.h */,
+				6E40A4F9184C21220077F0D8 /* RelembrarSenhaViewController.m */,
+				6EBFF874185FDFA400062D0A /* EditarSenhaViewController.h */,
+				6EBFF875185FDFA400062D0A /* EditarSenhaViewController.m */,
+			);
+			name = "Cofigurações";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +623,7 @@
 				6E39C8661864F27700AD984A /* orei_tabbar.png in Resources */,
 				6EACE76918569B29004A952F /* login@2x.png in Resources */,
 				6EACE76418569B29004A952F /* idomas.png in Resources */,
+				6E731E3F19E2D67A009965B6 /* SVProgressHUD.bundle in Resources */,
 				6E5A36541839B236009B7ED5 /* Images.xcassets in Resources */,
 				6EACE76718569B29004A952F /* login_txt@2x.png in Resources */,
 				6EACE77B18569B29004A952F /* proxima@2x.png in Resources */,
@@ -637,7 +698,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -651,6 +712,7 @@
 				6E1F3F191846DB8800172714 /* IdiomaTableViewController.m in Sources */,
 				6E964CAD1839B6D300515563 /* Login.m in Sources */,
 				6E0361711839B5A600748088 /* User.m in Sources */,
+				6E6588CD19C7209D006B9730 /* ExpirationTableViewController.m in Sources */,
 				6EAE581C1845A2F50071D4E2 /* MinhaMsgCell.m in Sources */,
 				6EAE581918458DCC0071D4E2 /* MinhasMsgsTableViewController.m in Sources */,
 				6E1F3F1C1847EF6800172714 /* Idioma.m in Sources */,
@@ -658,6 +720,7 @@
 				6E7BE9601842827B00B6F3E5 /* LoginViewController.m in Sources */,
 				6EBFF876185FDFA400062D0A /* EditarSenhaViewController.m in Sources */,
 				6E0196501841327C00ACACE7 /* ControleTeclado.m in Sources */,
+				6E731E3E19E2D67A009965B6 /* SVProgressHUD.m in Sources */,
 				6EC363DB183AB2A500610ECE /* MsgGet.m in Sources */,
 				6E7BE96318428B9E00B6F3E5 /* ConfigViewController.m in Sources */,
 				6E7BE9661842C1CE00B6F3E5 /* CadastrarViewController.m in Sources */,
@@ -667,6 +730,7 @@
 				6EC363DE183ABA8E00610ECE /* MsgGetViewController.m in Sources */,
 				6E40A4FA184C21220077F0D8 /* RelembrarSenhaViewController.m in Sources */,
 				6E5A364C1839B236009B7ED5 /* AppDelegate.m in Sources */,
+				6E984BB319C67C800016A797 /* LanguageTableViewController.m in Sources */,
 				6E87A4CF183D9821008CA7EA /* MsgPostViewController.m in Sources */,
 				6E5A36481839B236009B7ED5 /* main.m in Sources */,
 			);
@@ -792,7 +856,7 @@
 		};
 		6E5A366B1839B236009B7ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0352E7E43A384758B6266DBE /* Pods.xcconfig */;
+			baseConfigurationReference = 1E812E7E1C4D0091DD1D2405 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -805,6 +869,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/thiagopac/Documents/workspace/Sinai/Sinai/Sinai,
+					"$(PROJECT_DIR)/Pods/GoogleAnalytics-iOS-SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -814,7 +879,7 @@
 		};
 		6E5A366C1839B236009B7ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0352E7E43A384758B6266DBE /* Pods.xcconfig */;
+			baseConfigurationReference = 09009220864DDA358536E29E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -826,6 +891,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/thiagopac/Documents/workspace/Sinai/Sinai/Sinai,
+					"$(PROJECT_DIR)/Pods/GoogleAnalytics-iOS-SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
