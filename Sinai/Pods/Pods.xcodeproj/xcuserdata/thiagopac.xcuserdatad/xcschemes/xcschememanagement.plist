@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GameThrivePushNotifications.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GoogleAnalytics-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>720EF080218D550E4F8F2186</key>
+		<key>0421FEF3F6238F9A38D36370</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74406ABF4AB9DC8A3FB6B3BC</key>
+		<key>0EF9758761810B4A30910F42</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D6FA6853091925E17FD2DE1</key>
+		<key>1D4DCF251C1C9FF46F7F9E1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96956C40FC7B3F6AAF306AEE</key>
+		<key>4535D78F606763D19DC1C4D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B266DB0DB61B4E9A24310039</key>
+		<key>51A8BE7B63619D72B31A1E61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD19412216F7321622A34E54</key>
+		<key>9AAA845F8210CA5CC371D4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE5698F7489330677276B4DC</key>
+		<key>EE786B204236C383AAB20F6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F813AE5113FC1018F7258D5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

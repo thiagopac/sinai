@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GameThrive/GameThrive.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) GameThrive *gameThrive;
 
 @end

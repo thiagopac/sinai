@@ -13,6 +13,8 @@
 #import "OracaoFeita.h"
 #import "MappingProvider.h"
 #import "SVProgressHUD.h"
+#import "AppDelegate.h"
+#import <GameThrive/GameThrive.h>
 
 @interface MsgGetViewController (){
     MsgGet *msgget;
@@ -43,6 +45,11 @@
     dispatch_async(queue, ^{
         [self loadMsgGet];
     });
+    
+//#pragma enviando tag GameThrive
+//    [[[self appDelegate] gameThrive] sendTag:@"Grupo" value:@"Todos"];
+    
+    
 #pragma Google Analytics
     self.screenName = @"Lendo";
     
@@ -91,6 +98,10 @@
     [path closePath];
     
     return path.CGPath;
+}
+
+- (AppDelegate*)appDelegate {
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)loadMsgGet {

@@ -1,5 +1,6 @@
 PODS:
   - AFNetworking (1.3.4)
+  - GameThrivePushNotifications (1.5.4)
   - GoogleAnalytics-iOS-SDK (3.0.9)
   - RestKit (0.20.3):
     - RestKit/Core
@@ -21,12 +22,14 @@ PODS:
   - TransitionKit (1.1.1)
 
 DEPENDENCIES:
+  - GameThrivePushNotifications (~> 1.5)
   - GoogleAnalytics-iOS-SDK (~> 3.0.3)
   - RestKit (~> 0.20.0)
   - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
+  GameThrivePushNotifications: 76873178919c1b8bc966ff03328c8da702f4193b
   GoogleAnalytics-iOS-SDK: d9e198b1f955259a72886769be7377cdfcdb2250
   RestKit: 7f9490e709ee745e166c4d2aa7a8d132831275b0
   SOCKit: d8d0dd3688ae1026c12367570da8fa8e1a6980fb
